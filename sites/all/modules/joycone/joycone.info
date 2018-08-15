@@ -1,0 +1,4 @@
+name = JoyCone
+description = Module for custom site functionality for JoyCone
+core = 7.x
+

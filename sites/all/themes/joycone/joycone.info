@@ -1,0 +1,18 @@
+name = JoyCone
+description = Blue Chip Marketing Worldwide JoyCone theme
+core = 7.x
+engine = phptemplate
+
+regions[header]        = Header
+regions[header_right]  = Header - Top-Right
+regions[header_drop]   = Header Dropdown
+regions[hook]          = Hook Area
+regions[social]        = Social Area
+regions[content]       = Content
+regions[footer_banner] = Footer Banner
+regions[footer_logo]   = Footer Logo
+regions[footer]        = Footer
+regions[post_footer]   = Post Footer
+regions[page_bottom]   = Page bottom
+
+stylesheets[all][] = style.css

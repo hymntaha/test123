@@ -1,0 +1,131 @@
+<?php
+
+/**
+ * Implementation of hook_views_api().
+ */
+function uc_views_bulk_operations_views_api() {
+  return array(
+    'api' => '2.0',
+    'path' => drupal_get_path('module', 'uc_views_bulk_operations') .'/views',
+  );
+}
+
+/**
+ * Implementation of hook_views_bulk_operations_object_info()
+ */
+function uc_views_bulk_operations_views_bulk_operations_object_info() {
+  return array(
+    'order' => array(
+      'type' => 'order',
+      'base_table' => 'uc_orders',
+      'load' => 'uc_order_load',
+      'title' => 'order_id',
+    )
+  );
+}
+
+/**
+ * Implements hook_action_info().
+ *
+ * This function defines all custom actions added by this module.
+ */
+function uc_views_bulk_operations_action_info() {
+  return array(
+    'uc_views_bulk_operations_process_orders' => array(
+      'type' => 'uc_order',
+      'label' => t('Move to next state'),
+      'configurable' => FALSE,
+	  'aggregate' => TRUE,
+    ),
+    'uc_views_bulk_operations_print_orders' => array(
+      'type' => 'uc_order',
+      'label' => t('Print invoice'),
+      'configurable' => FALSE,
+	  'aggregate' => TRUE,
+    ),
+	'uc_views_bulk_operations_delete_orders' => array(
+	  'type' => 'uc_order',
+      'label' => t('Delete order'),
+      'configurable' => FALSE,
+	  'aggregate' => TRUE,
+    ),
+	'uc_views_bulk_operations_add_to_cart_action' => array(
+      'type' => 'node',
+      'label' => t('Add to cart'),
+      'configurable' => FALSE,
+	  'aggregate' => FALSE,
+    ),
+  );
+}
+
+/**
+ * Processes selected orders (moves them to next state in CA)
+ */
+function uc_views_bulk_operations_process_orders($orders, $params) {
+  $states = uc_order_status_list();
+  foreach($orders as $order_id => $order) {
+    foreach ($states as $key => $state) {
+      if ($state['id'] == $order->order_status) {
+        // state matches current one, so grab the next one if it exists.
+        if (isset($states[$key+1])) {
+          $new_status = $states[$key+1]['id'];
+        } else { // there is no "next state", so we're at the end. return error msg.
+          $new_status = NULL;
+          drupal_set_message(t('Order #!order_id already at final state. Unable to update.', array('!order_id' => $order_id)), 'error', FALSE);
+        }
+      }
+    }
+    // now we need to update each order accordingly.
+    if ($new_status) {
+      uc_order_update_status($order_id, $new_status);
+      drupal_set_message(t('Order #!order_id updated to status: !status', array('!order_id' => $order_id, '!status' => $new_status)));
+    }
+  }
+}
+
+/**
+ * Print multiple invoices.
+ */
+function uc_views_bulk_operations_print_orders($orders, $params) {
+  $output = '';
+
+  foreach ($orders as $order) {
+    $output .= '<div style="page-break-after: always;">';
+    $output .= drupal_render(uc_order_view_invoice($order));
+    $output .= '</div>';
+  }
+
+  print '<html><head><title>Invoice</title></head>';
+  print '<body onload="print();">';
+  print $output;
+  print '</body></html>';
+  exit;
+}
+
+function uc_views_bulk_operations_delete_orders($orders) {
+  foreach($orders as $order) {
+    uc_order_delete($order->order_id);
+  }
+}
+
+/**
+ * "Add to cart" node action.
+ */
+function uc_views_bulk_operations_add_to_cart_action($node, $params) {
+  uc_cart_add_item($node->nid);
+}
+
+
+/**
+ * Implementation of hook_perm().
+ */
+function uc_views_bulk_operations_perm() {
+  $perms = array();
+  if (module_exists('actions_permissions')) {
+    foreach (module_invoke_all('order_operations') as $operation) {
+      if (is_array($operation['label']) || empty($operation['callback'])) continue;
+      $perms[] = actions_permissions_get_perm($operation['label'], $operation['callback']);
+    }
+  }
+  return $perms;
+}

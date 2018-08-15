@@ -1,0 +1,530 @@
+<?php
+
+define('JOYCONE_PRODUCTS_TAXONOMY_RETAIL', 1);
+define('JOYCONE_PRODUCTS_TAXONOMY_FS', 2);
+define('JOYCONE_KIDS_TAXONOMY', 10);
+define('JOYCONE_EMPLOYMENT_TAXONOMY', 14);
+define('JOYCONE_NODE_LOCATOR', 20);
+define('JOYCONE_FAQ_TAXONOMY', 39);
+define('JOYCONE_FAQ_TAXONOMY_RETAIL', 8);
+define('JOYCONE_FAQ_TAXONOMY_FS', 37);
+define('JOYCONE_COUPON_WEBFORM_NID', 48122);
+define('JOYCONE_TAX_EXEMPT_TAXONOMY', 35);
+
+define('JOYCONE_SIDEBAR_TAXONOMY_ABOUT_US', 17);
+define('JOYCONE_SIDEBAR_TAXONOMY_FAQ', 18);
+define('JOYCONE_SIDEBAR_TAXONOMY_EMPLOYMENT', 19);
+
+define('JOYCONE_FS_COMPARE_CAKECONES', 20);
+define('JOYCONE_FS_COMPARE_SUGARCONES', 21);
+define('JOYCONE_FS_COMPARE_WAFFLECONES', 22);
+
+// define('JOYCONE_GMAPS_CLIENT_ID', 'gme-bluechipmarketing');
+// define('JOYCONE_GMAPS_CRYPT_KEY', 'gl7p54dVj_T2HGodsaaY4MksAb4=');
+
+function joycone_webform_submission_presave($node, &$submission) {
+    //print_r($submission); exit();
+
+    // hijack the email options for the contact form
+    if ($submission->nid == 9) {
+    	switch ($submission->data[1]['value'][0]) {
+		case "subject01":
+		case "subject02":
+		case "subject03":
+			$email_to = 'rtsales@joycone.com';
+			break;
+		case "subject04":
+			$email_to = 'qcadmin@joycone.com';
+			break;
+		case "subject05":
+			$email_to = 'fssales@joycone.com';
+			break;
+		case "subject06":
+			$email_to = 'flag.tours@joycone.com';
+			break;
+		case "subject07":
+			$email_to = 'hrherm@joycone.com';
+			break;
+		case "subject09":
+			$email_to = 'Lindsey@marketingmavenpr.com';
+			break;
+		case "select_or_other":
+			$email_to = 'other@joycone.com';
+			break;
+        default:
+            $email_to = 'support@joycone.com';
+    	}
+    	
+    	$submission->data[18]['value'][0] = $email_to;
+    }
+}
+
+function joycone_menu() {
+    $items['stores_by_zip/%/%/%'] = array(
+        'page callback'   => 'joycone_stores_by_zip_json',
+        'page arguments'  => array(1, 2, 3),
+        'access callback' => true,
+    );
+
+    $items['recipes_pinterest'] = array(
+        'page callback'   => 'joycone_recipes_curl',
+        'access callback' => true,
+    );
+
+    $items['get_coupon/%'] = array(
+        'page callback'   => 'joycone_do_get_coupon',
+        'page arguments'  => array(1),
+        'access callback' => true,
+    );
+		
+	$items['admin/build/upload-store-list'] = array(
+		'title' => 'Upload Store List',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('joycone_upload_store_list_form'),
+		'access callback' => 'user_access',
+		'access arguments' => array('bulk-update store list'),
+	);
+        
+    $items['admin/build/current-store-list'] = array(
+        'page callback' => 'joycone_current_store_list',
+        'access callback' => 'user_access',
+        'access arguments' => array('bulk-update store list'),
+    );
+
+    return $items;
+}
+
+function joycone_perm() {
+    return array('bulk-update store list');
+}
+
+function joycone_module_menu_alter(&$items) {
+    $items['nodereference/autocomplete']['page callback'] = 'joycone_nodereference_autocomplete';
+}
+
+function joycone_pathauto_alias_alter(&$alias, $context) {
+    if ($context['module'] === 'node' && $context['type'] === 'product') {
+        $node = node_load($context['entity_id']);
+        $category = reset($node->taxonomy);
+        $cat_parent = taxonomy_get_parents($category->tid);
+        $cat_parent = reset($cat_parent);
+        if ($cat_parent->tid == JOYCONE_PRODUCTS_TAXONOMY_FS) {
+            $alias = 'food-service/'.$alias;
+        }
+    }
+}
+
+function joycone_nodereference_autocomplete($field_name, $string = '') {
+    $fields = content_fields();
+    $field = $fields[$field_name];
+    $match = isset($field['widget']['autocomplete_match']) ? $field['widget']['autocomplete_match'] : 'contains';
+    $matches = array();
+
+    $references = _nodereference_potential_references($field, $string, $match, array(), 10);
+    foreach ($references as $id => $row) {
+        // Add a class wrapper for a few required CSS overrides.
+        $matches[$row['title']] = '<div class="reference-autocomplete">' . $row['rendered'] . '</div>';
+    }
+    drupal_json($matches);
+}
+
+function joycone_do_get_coupon($id) {
+    if (!empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        //todo some stuff
+    }
+
+    $result = db_query(sprintf('SELECT 
+        (SELECT data FROM webform_submitted_data WHERE nid = '.JOYCONE_COUPON_WEBFORM_NID.' AND sid = %1$d AND cid = 2) AS offerCode,
+        (SELECT data FROM webform_submitted_data WHERE nid = '.JOYCONE_COUPON_WEBFORM_NID.' AND sid = %1$d AND cid = 1) AS checkCode,
+        (SELECT data FROM webform_submitted_data WHERE nid = '.JOYCONE_COUPON_WEBFORM_NID.' AND sid = %1$d AND cid = 3) AS longKey,
+        (SELECT data FROM webform_submitted_data WHERE nid = '.JOYCONE_COUPON_WEBFORM_NID.' AND sid = %1$d AND cid = 4) AS shortKey', $id));
+
+    $res = db_fetch_object($result);
+
+    $offerCode = $res->offerCode;
+    $checkCode = $res->checkCode;
+    $longKey   = $res->longKey;
+    $shortKey  = $res->shortKey;
+
+    require __DIR__.'/blupon.php';
+    exit();
+}
+
+function joycone_recipes_curl() {
+    echo file_get_contents('https://305927716147259.offertabs.com/1550154?view=pins&board=recipe-ideas');
+    exit();
+}
+
+function joycone_all_products_az() {
+    $result = db_query(db_rewrite_sql('SELECT th.tid FROM {term_hierarchy} th WHERE th.parent = '.JOYCONE_PRODUCTS_TAXONOMY_RETAIL, 'th', 'tid'));
+    $tids = array();
+    while ($term = db_fetch_object($result)) {
+        $tids[] = $term->tid;
+    }
+
+    $result = db_query(db_rewrite_sql('SELECT DISTINCT(n.nid) FROM {node} n INNER JOIN {term_node} tn ON n.vid = tn.vid WHERE tn.tid IN ('.join(',',$tids).') AND n.status = 1 ORDER BY SUBSTRING_INDEX(LOWER(n.title), \'ct. \', -1) ASC, CONVERT(SUBSTRING_INDEX(LOWER(n.title), \'ct. \', 1), UNSIGNED) ASC'));
+    $nodes = array();
+    while ($node = db_fetch_object($result)) {
+        $n = node_load($node->nid);
+        if (empty($n->field_instore[0]['value'])) continue;
+        $nodes[] = $n;
+    }
+
+    return $nodes;
+}
+
+function joycone_stores_by_zip_json($zip, $radius, $product_id = null) {
+    if ($product_id === "any") $product_id = null;
+
+    $stores = joycone_get_stores_by_zip($zip, $radius, $product_id);
+
+    $data = array(
+        'stores'     => array(),
+        'zip_coords' => joycone_get_zip_coords($zip)
+    );
+
+    foreach ($stores as $store) {
+        $data['stores'][] = array(
+            'nid'       => $store->nid,
+            'name'      => $store->title,
+            'address1'  => $store->field_address1[0]['value'],
+            'address2'  => $store->field_address2[0]['value'],
+            'city'      => $store->field_city[0]['value'],
+            'state'     => $store->field_state[0]['value'],
+            'zip'       => $store->field_zip[0]['value'],
+            'phone'     => $store->field_phone[0]['value'],
+            'distance'  => $store->distance,
+            'lat'       => $store->field_lat[0]['value'],
+            'lon'       => $store->field_long[0]['value'],
+            'node_view' => node_view($store, 1),
+        );
+    }
+
+    return drupal_json($data);
+}
+
+function joycone_nodeapi(&$node, $op) {
+    if ($node->type == 'store' && $op == 'presave') {
+        if (empty($node->field_lat[0]['value']) || empty($node->field_long[0]['value'])) {
+            $coords = get_geolocation(sprintf('%s, %s, %s %s USA', $node->field_address1[0]['value'], $node->field_city[0]['value'], $node->field_state[0]['value'], $node->field_zip[0]['value']));
+
+            $node->field_lat[0]['value'] = $coords['lat'];
+            $node->field_long[0]['value'] = $coords['lon'];
+        }
+    }
+}
+
+function joycone_get_zip_coords($zip) {
+    static $coord_cache = array();
+
+    $zip = str_pad(intval($zip), 5, '0', STR_PAD_LEFT);
+    if (empty($zip)) return null;
+
+    if (isset($coord_cache[$zip])) return $coord_cache[$zip];
+
+    $coords_res = db_query('SELECT lat, lon FROM zip_coord_cache WHERE zip = "%d"', $zip);
+    if ($coords_res->num_rows === 0) {
+        $coords = get_geolocation($zip);
+        db_query('INSERT INTO zip_coord_cache (zip, lat, lon) VALUES ("%d", "%s", "%s") ON DUPLICATE KEY UPDATE lat = "%s", lon = "%s"', $zip, $coords['lat'], $coords['lon'], $coords['lat'], $coords['lon']);
+    } else {
+        $coords = $coords_res->fetch_assoc();
+    }
+    $coord_cache[$zip] = $coords;
+
+    return $coords;
+}
+
+function joycone_get_stores_by_zip($zip, $radius, $product_id = null) {
+    $coords = joycone_get_zip_coords($zip);
+    if (empty($coords)) return [];
+    
+    if (empty($product_id)) {
+        $stores_res = db_query(sprintf('SELECT s.nid, (((ACOS(SIN((%s*PI()/180)) * SIN((field_lat_value*PI()/180)) + COS((%s*PI()/180)) *  COS((field_lat_value*PI()/180)) * COS(((%s - field_long_value)*PI()/180))))*180/PI())*60*1.423) AS distance FROM content_type_store as s INNER JOIN node n on s.nid = n.nid WHERE n.status = 1 HAVING distance <= %d ORDER BY distance', $coords['lat'], $coords['lat'], $coords['lon'], $radius));
+    } else {
+        $stores_res = db_query(sprintf('SELECT s.nid, (((ACOS(SIN((%s*PI()/180)) * SIN((field_lat_value*PI()/180)) + COS((%s*PI()/180)) *  COS((field_lat_value*PI()/180)) * COS(((%s - field_long_value)*PI()/180))))*180/PI())*60*1.423) AS distance FROM content_type_store as s LEFT JOIN content_field_products p ON s.nid = p.nid INNER JOIN node n on s.nid = n.nid WHERE p.field_products_nid = %d AND n.status = 1 HAVING distance <= %d ORDER BY distance', $coords['lat'], $coords['lat'], $coords['lon'], $product_id, $radius));
+    }
+    $stores = array();
+    while ($s = $stores_res->fetch_assoc()) {
+        $store = node_load($s['nid']);
+        $store->distance = $s['distance'];
+        $stores[] = $store;
+    }
+    return $stores;
+}
+
+// Encode a string to URL-safe base64
+function encodeBase64UrlSafe($value)
+{
+  return str_replace(array('+', '/'), array('-', '_'),
+    base64_encode($value));
+}
+
+// Decode a string from URL-safe base64
+function decodeBase64UrlSafe($value)
+{
+  return base64_decode(str_replace(array('-', '_'), array('+', '/'),
+    $value));
+}
+
+// // Sign a URL with a given crypto key
+// // Note that this URL must be properly URL-encoded
+// function gmaps_sign_url($myUrlToSign, $privateKey)
+// {
+//   // parse the url
+//   $url = parse_url($myUrlToSign);
+
+//   $urlPartToSign = $url['path'] . "?" . $url['query'];
+
+//   // Decode the private key into its binary format
+//   $decodedKey = decodeBase64UrlSafe($privateKey);
+
+//   // Create a signature using the private key and the URL-encoded
+//   // string using HMAC SHA1. This signature will be binary.
+//   $signature = hash_hmac("sha1",$urlPartToSign, $decodedKey,  true);
+
+//   $encodedSignature = encodeBase64UrlSafe($signature);
+
+//   return $myUrlToSign."&signature=".$encodedSignature;
+// }
+
+function get_geolocation($address) {
+    $lat = $lon = $source = null;
+
+    if(!empty($address)) {
+        $address = urlencode(trim($address));
+                
+        // $key = 'gl7p54dVj_T2HGodsaaY4MksAb4=';
+        // $client_id = 'gme-bluechipmarketing';
+        // $url = gmaps_sign_url(sprintf('https://maps.googleapis.com/maps/api/geocode/json?address=%s&sensor=false&client=%s', $address, JOYCONE_GMAPS_CLIENT_ID), JOYCONE_GMAPS_CRYPT_KEY);
+
+        // $data = json_decode(file_get_contents($url), true);
+
+        $address = urlencode(trim($address));
+
+        $source = 'google';
+        $data = json_decode(file_get_contents(str_replace(' ', '+', sprintf('http://maps.googleapis.com/maps/api/geocode/json?address=%s&sensor=false', $address))), true);
+
+        if(!empty($data) && !empty($data['results'][0]['geometry']['location'])) {
+            list($lat, $lon) = array_values($data['results'][0]['geometry']['location']);
+        }
+
+        if(!empty($lat) && !empty($lon)) {
+            $lon = number_format($lon,7,'.','');
+            $lat = number_format($lat,7,'.','');
+
+            return array('lon' => $lon, 'lat' => $lat, 'source' => $source);
+        }
+    }
+
+    return false;
+}
+
+/* Store list */
+
+function joycone_current_store_list() {
+    set_time_limit(0);
+    header('Content-Type: text/csv');
+    header('Content-Disposition: attachment; filename="joycone-storelist-'.date('Ymd-Hi').'.csv"');
+
+    $products = joycone_all_products_az();
+
+    echo '"ID","#","Store Name","Address Line 1","Address Line 2","City","State","Zip Code","Country","Phone","Latitude","Longitude"';
+    foreach ($products as $p) {
+        echo ',"';
+        echo $p->nid;
+        echo ' (';
+        echo $p->title;
+        echo ')"';
+    }
+    echo "\n";
+
+    $stores_res = db_query("SELECT s.*, CONCAT('|', GROUP_CONCAT(p.field_products_nid SEPARATOR '|'), '|') AS products FROM content_type_store as s INNER JOIN node n on s.nid = n.nid LEFT JOIN content_field_products p ON s.nid = p.nid WHERE n.status = 1 GROUP BY s.nid");
+    
+    while ($s = $stores_res->fetch_assoc()) {
+
+        echo '"';
+        echo $s['nid'];
+        echo '","';
+        echo $s['field_storenum_value'];
+        echo '","';
+        echo $s['field_name_value'];
+        echo '","';
+        echo $s['field_address1_value'];
+        echo '","';
+        echo $s['field_address2_value'];
+        echo '","';
+        echo $s['field_city_value'];
+        echo '","';
+        echo $s['field_state_value'];
+        echo '","';
+        echo str_pad($s['field_zip_value'], 5, '0', STR_PAD_LEFT);
+        echo '","';
+        echo $s['field_country_value'];
+        echo '","';
+        echo $s['field_phone_value'];
+        echo '","';
+        echo $s['field_lat_value'];
+        echo '","';
+        echo $s['field_long_value'];
+        echo '"';
+
+        foreach ($products as $p) {
+            echo ',"';
+            echo strpos($s['products'], '|'.$p->nid.'|') === false ? 'No' : 'Yes';
+            echo '"';
+        }
+
+        echo "\n";
+    }
+
+    exit();
+}
+
+function joycone_upload_store_list_form() {
+	
+	// boot while I'm working on it
+	//drupal_goto();
+	
+	$form['#attributes'] = array('enctype' => "multipart/form-data");
+    
+	// general section
+	$form['general'] = array(
+		'#type' => 'fieldset',
+		'#title' => t('This will add <em>live</em> data, so please be careful! <a style="float:right;" href="/admin/build/current-store-list">Download current store list</a>'),
+	);
+	
+    $form['general']['store_list_csv'] = array(
+        '#type' => 'file',
+        '#title' => t('Store List CSV File'),
+        '#description' => t('Please triple check that all of the information in the CSV is both spelled and named organized properly!'),
+    );
+	
+	$form['submit'] = array(
+		'#type' => 'submit',
+		'#value' => t('Upload store list'),
+	);
+	
+	return $form;
+	
+}
+
+function joycone_upload_store_list_form_validate($form, &$form_state) {
+    set_time_limit(0);
+    
+    // csv setup
+    ini_set('auto_detect_line_endings', true);
+
+    $good_upload = false;
+    switch ($_FILES['files']['error']['store_list_csv']) {
+        case UPLOAD_ERR_INI_SIZE:
+        case UPLOAD_ERR_FORM_SIZE:
+            drupal_set_message('Error updating store list! File is too large!', 'error');
+            return FALSE;
+
+        case UPLOAD_ERR_PARTIAL:
+        case UPLOAD_ERR_NO_FILE:
+            drupal_set_message('Error updating store list! Upload did not complete successfully!', 'error');
+            return FALSE;
+
+        case UPLOAD_ERR_OK:
+            if (is_uploaded_file($_FILES['files']['tmp_name']['store_list_csv'])) {
+                $good_upload = true;
+                break;
+            }
+
+        default:
+            drupal_set_message('The file could not be saved. An unknown error has occurred.', 'error');
+    }
+
+    
+    if ($good_upload && ($file = file_save_upload('store_list_csv', array(), file_directory_path()))) {
+        if (($rows = fopen($file->filepath, "rb")) !== FALSE) {
+            $first = true;
+
+            $products = array();
+
+            while (($row = fgetcsv($rows, 1000, ",")) !== FALSE) {
+                
+                if ($first) {
+                    for ($q = 12; $q < count($row); $q++) {
+                        list($product_id) = explode(' ', $row[$q], 2);
+                        $products[] = intval($product_id);
+                    }
+
+                    $first = false;
+                    continue;
+                }
+
+                $s = array(
+                    'storenum' => $row[1],
+                    'name'     => $row[2],
+                    'address1' => $row[3],
+                    'address2' => $row[4],
+                    'city'     => $row[5],
+                    'state'    => $row[6],
+                    'zip'      => $row[7],
+                    'country'  => $row[8],
+                    'phone'    => $row[9],
+                    'lat'      => $row[10],
+                    'long'     => $row[11],
+                );
+
+                if (empty($row[0])) {
+                    $store = new stdClass();
+                    $store->title = '#'.$s['storenum'].': '.$s['name'].' - '.$s['city'].', '.$s['state'].' '.$s['zip'];
+                    $store->type = 'store';
+                    $store->name = 'bcadmin';
+
+                    $node = node_submit($store);
+                    node_save($node);
+                    $nid = $node->nid;
+                } else if (strtolower($row[0][0]) == 'x') {
+                    node_delete(intval(substr($row[0], 1)));
+                    continue;
+                } else {
+                    $nid = intval($row[0]);
+                }
+
+                if (empty($s['lat']) || empty($s['long'])) {
+                    $coords = get_geolocation(sprintf('%s, %s, %s %s USA', $s['address1'], $s['city'], $s['state'], $s['zip']));
+
+                    $s['lat'] = $coords['lat'];
+                    $s['long'] = $coords['lon'];
+                }
+
+                db_query('UPDATE content_type_store SET 
+                    field_storenum_value = \''.db_escape_string($s['storenum']).'\',
+                    field_name_value     = \''.db_escape_string($s['name']).'\',
+                    field_address1_value = \''.db_escape_string($s['address1']).'\',
+                    field_address2_value = \''.db_escape_string($s['address2']).'\',
+                    field_city_value     = \''.db_escape_string($s['city']).'\',
+                    field_state_value    = \''.db_escape_string($s['state']).'\',
+                    field_zip_value      = \''.db_escape_string($s['zip']).'\',
+                    field_country_value  = \''.db_escape_string($s['country']).'\',
+                    field_phone_value    = \''.db_escape_string($s['phone']).'\',
+                    field_lat_value      = \''.db_escape_string($s['lat']).'\',
+                    field_long_value     = \''.db_escape_string($s['long']).'\'
+                    WHERE nid = '.$nid);
+                db_query('DELETE FROM content_field_products WHERE nid = '.$nid);
+                
+                $delta = 0;
+                for ($q = 0; $q < count($products); $q++) {
+                    if (strtolower($row[$q+12][0]) == 'y') {
+                        db_query('INSERT INTO content_field_products (vid, nid, delta, field_products_nid) VALUES ('.$nid.','.$nid.','.$delta++.','.$products[$q].') ON DUPLICATE KEY UPDATE field_products_nid='.$products[$q]);
+                    }
+                }
+            }
+            fclose($rows);
+        }
+
+        db_query("DELETE FROM {files} WHERE filepath = '%s'", $file->filepath);
+        unlink($file->filepath);
+
+        drupal_flush_all_caches();
+        drupal_set_message('Store list updated successfully!');
+    } else {
+        // drupal_set_message('Error updating store list! Did you upload the correct file?', 'error');
+    }
+
+    //drupal_goto('admin/build/upload-store-list');
+}

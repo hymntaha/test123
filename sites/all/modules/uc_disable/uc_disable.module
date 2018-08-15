@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Adds ability to disable Ubercart store (hide/disable add to cart, etc) for some conditions
+ */
+ 
+ 
+/* Notes:
+ * TODO: I eventually would like to disable or 404 "cart" and other known uc menus and paths
+*/
+
+/**
+ * Implementation of hook_permission().
+ *
+ */
+function uc_disable_permission() {
+  return array(
+    'enable store checkout' => array(
+      'title' => t('enable store checkout'),
+      'description' => t('Enables Store Checkout'),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_form_alter().
+ *
+ */
+function uc_disable_form_alter(&$form, &$form_state, $form_id) {
+  // disarm add_to_cart form
+  if (strstr($form_id, 'uc_product_add_to_cart_form_')) {
+    if (!user_access('enable store checkout')) {
+      $form['#access'] = false;
+    }
+  }
+}
+
+/**
+ * Implementation of hook_enable()
+ *
+ */
+function uc_disable_enable() {
+  drupal_set_message(t("uc_disable enabled: Ubercart Store will now be enabled only for roles with 'enable store checkout' in User Permissions page."));
+}

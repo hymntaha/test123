@@ -1,0 +1,118 @@
+<?php
+// $Id$
+
+/**
+ * Implementation of hook_install().
+ */
+function uc_warehouse_install() {
+  drupal_install_schema('uc_warehouse');
+  
+  db_query('ALTER TABLE {uc_packages} ADD warehouse VARCHAR(255) DEFAULT NULL AFTER order_id');
+}
+
+
+function uc_warehouse_uninstall() {
+  drupal_uninstall_schema('uc_warehouse');
+  variable_del('uc_warehouse');
+  
+  db_query('ALTER TABLE {uc_packages} DROP warehouse_id');
+}
+
+
+function uc_warehouse_schema() {
+  $schema['uc_warehouse'] = array(
+    'description' => t('Ubercart warehouses'),
+    'fields' => array(
+      'warehouse_id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => t('The warehouse id.'),
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => t('Name of the warehouse.'),
+      ),   
+      'street_address_1' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => t('Street address line 1'),
+      ), 
+      'street_address_2' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => t('Street address line 2'),
+      ), 
+      'city' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => t('Name of the city.'),
+      ),     
+      'country' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => t('Name of the country.'),
+      ),        
+      'zone' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => t('Name of the zone.'),
+      ), 
+      'postal_code' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => t('Postal code'),
+      ),                          
+    ),
+    'primary key' => array('warehouse_id'),
+  );
+  
+  $schema['uc_warehouse_product'] = array(
+    'description' => t('Ubercart warehouse products'),
+    'fields' => array(
+      'nid' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => t('The node id.'),
+      ),
+      'warehouse_id' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => t('The warehouse id.'),
+      ),                              
+    ),
+    'primary key' => array('nid, warehouse_id'),
+  );
+
+  $schema['uc_warehouse_product_config'] = array(
+    'description' => t('Ubercart warehouse product configuration'),
+    'fields' => array(
+      'nid' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => t('The node id.'),
+      ),
+      'ship_separately' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => t('Does this ship separately.'),
+      ),                              
+    ),
+    'primary key' => array('nid'),
+  );
+
+  return $schema;
+}

@@ -1,0 +1,5 @@
+name = Ubercart Views Bulk Operations
+description = Print, delete or change the status of multiple orders, or add multiple nodes to the cart at once.
+dependencies[] = views_bulk_operations
+package = "Ubercart - views"
+core = 7.x

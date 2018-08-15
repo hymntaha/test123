@@ -1,0 +1,27 @@
+//Start of Mixins
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $spread $color #{$inset};
+    -moz-box-shadow:$top $left $blur $spread $color #{$inset};
+    box-shadow:$top $left $blur $spread $color #{$inset};
+}
+@mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left){
+	border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+@mixin circle_div($percent){
+	border-radius: $percent;
+	-moz-border-radius: $percent;
+	-webkit-border-radius: $percent;
+}
+@mixin background($color01, $color02, $color_filter01, $color_filter02, $position01, $position02, $position03, $start, $end, $gradient_type){
+	background: $color01;
+	background: -moz-linear-gradient($position01, $color01 $start, $color02 $end);
+	background: -webkit-gradient($position02 $position01, $position02 $position03, color-stop($start, $color01), color-stop($end, $color02));
+	background: -webkit-linear-gradient($position01, $color01 $start, $color02 $end);
+	background: -o-linear-gradient($position01, $color01 $start, $color02 $end);
+	background: -ms-linear-gradient($position01, $color01 $start, $color02 $end);
+	background: linear-gradient(to $position03, $color01 $start, $color02 $end);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color_filter01', endColorstr='$color_filter02', GradientType=$gradient_type );
+}
+//Start of Functions

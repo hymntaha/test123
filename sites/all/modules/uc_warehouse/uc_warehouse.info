@@ -1,0 +1,7 @@
+; $Id$
+name = Warehouse
+description = Assign product availability by warehouse.
+core = 6.x
+version = 6.x - 1.0.0
+dependencies[] = uc_product
+package = Ubercart - extra

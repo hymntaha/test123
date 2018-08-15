@@ -1,0 +1,248 @@
+<?php
+
+/**
+* Implementation of hook_menu().
+*/
+function uc_warehouse_menu() {
+        $items['admin/store/settings/warehouses'] = array(
+                'title' => 'Warehouse settings',
+                'description' => 'Setup ',
+                'page callback' => 'drupal_get_form',
+                'page arguments' => array('uc_warehouse_admin_settings'),
+                'access arguments' => array('administer warehouses'),
+                'type' => MENU_NORMAL_ITEM,
+                'file' => 'uc_warehouse.admin.inc',
+        );
+
+$items['admin/store/warehouses'] = array(
+    'title' => 'Warehouses',
+    'description' => 'Administer warehouses.',
+    'access arguments' => array('administer warehouses'),
+    'page callback' => 'uc_warehouse_administration',
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => -2,
+    'file' => 'uc_warehouse.admin.inc',
+);
+
+$items['admin/store/warehouses/list'] = array(
+    'title' => 'View Warehouses',
+    'description' => 'Administer warehouses.',
+    'access arguments' => array('administer warehouses'),
+    'page callback' => 'uc_warehouse_administration',
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => -2,
+    'file' => 'uc_warehouse.admin.inc',
+);
+
+$items['admin/store/warehouses/add'] = array(
+    'title' => 'Add Warehouse',
+    'description' => 'Add Warehouse',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('uc_warehouse_form'),
+    'access arguments' => array('administer warehouses'),
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => -2,
+    'file' => 'uc_warehouse.admin.inc',
+);
+
+$items['admin/store/warehouses/%uc_warehouse/edit'] = array(
+    'title' => 'Edit Warehouse',
+    'description' => 'Edit Warehouse',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('uc_warehouse_form', 3),
+    'access arguments' => array('administer warehouses'),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => -2,
+    'file' => 'uc_warehouse.admin.inc',
+);
+
+$items['admin/store/warehouses/%uc_warehouse/delete'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('uc_warehouse_delete_confirm', 3),
+    'access arguments' => array('administer warehouses'),
+    'type' => MENU_CALLBACK,
+    'file' => 'uc_warehouse.admin.inc',
+);
+
+        return $items;
+}
+
+
+/**
+* Add a warehouse selction area to those content types to use warehouses.
+*/
+function uc_warehouse_form_alter(&$form, $form_state, $form_id) {
+        if ($form_id == 'product_node_form') {
+        $warehouse_types = variable_get('uc_warehouse_node_types', '');
+
+        if ($form['type']['#value'] && in_array($form['type']['#value'], $warehouse_types)) {
+                // Get an array of warehouses
+                $query = 'SELECT warehouse_id, name FROM {uc_warehouse}';
+                $result = db_query($query);
+                $warehouses = Array();
+                while ($data = db_fetch_object($result)) {
+                        $warehouses[$data->warehouse_id] = t($data->name);
+                }
+
+                // Define a fieldset.
+                $form['warehouse'] = array(
+                        '#type' => 'fieldset',
+                        '#title' => t('Warehouses'),
+                        '#collapsible' => TRUE,
+                        '#collapsed' => FALSE,
+                        '#weight' => 2.5,
+                );
+
+                $form['warehouse']['uc_warehouse_id'] = array(
+                        '#type' => 'checkboxes',
+                        '#title' => t('Available from'),
+                        '#options' => $warehouses,
+                        '#default_value' => Array(),
+                        '#value' => $form['#node']->uc_warehouse_id,
+                        '#description' => t('Select the warehouses this product is available from'),
+                );
+
+                $form['warehouse']['uc_warehouse_ship_separately'] = array(
+                        '#type' => 'radios',
+                        '#title' => t('Ship Separately'),
+                        '#options' => array('1' => t('Yes'), '0' => t('No')),
+                        '#default_value' => $form['#node']->uc_warehouse_ship_separately,
+                        '#description' => t('Select Yes if this product cannot be combined with other products for shipping.'),
+                        '#required' => TRUE,
+                );
+        }
+        }
+}
+
+
+/**
+* Load a warehouse
+*/
+function uc_warehouse_load($warehouse_id) {
+$warehouse = db_fetch_object(db_query("SELECT * FROM {uc_warehouse} WHERE warehouse_id = %d", $warehouse_id));
+
+return $warehouse;
+}
+
+
+/**
+* Implement the nodeapi hook to handle warehouses
+*/
+function uc_warehouse_nodeapi(&$node, $op, $teaser, $page) {
+        global $user;
+
+        switch ($op) {
+                case 'load':
+                        $productWarehouses = Array();
+                        $query = 'SELECT warehouse_id FROM {uc_warehouse_product} WHERE nid = "%d"';
+                        $result = db_query($query, $node->nid);
+                        while ($data = db_fetch_object($result)) {
+                                $productWarehouses[$data->warehouse_id] = $data->warehouse_id;
+                        }
+                        $node->uc_warehouse_id = $productWarehouses;
+
+                        $query = 'SELECT ship_separately FROM {uc_warehouse_product_config} WHERE nid = "%d"';
+                        $result = db_query($query, $node->nid);
+                        if ($data = db_fetch_object($result)) {
+                                $node->uc_warehouse_ship_separately = $data->ship_separately;
+                        }
+                break;
+
+                case 'insert':
+                        $warehouse_types = variable_get('uc_warehouse_node_types', array());
+                        if (in_array($node->type, $warehouse_types)) {
+                                foreach ($node->uc_warehouse_id as $warehouseId => $value) {
+                                        if ($value != 0) {
+                                                $table = 'uc_warehouse_product';
+                                                $record = new stdClass();
+                                                $record->nid = $node->nid;
+                                                $record->warehouse_id = $warehouseId;
+
+                                                drupal_write_record($table, $record);
+                                                watchdog('content', 'uc_warehouse_product: Added warehouse to nid %id.', array('%id' => $record->nid));
+                                        }
+                                }
+
+                                $table = 'uc_warehouse_product_config';
+                                $record = new stdClass();
+                                $record->nid = $node->nid;
+                                $record->ship_separately = 0;
+                                drupal_write_record($table, $record);
+                        }
+                        break;
+
+                case 'update':
+                        $warehouse_types = variable_get('uc_warehouse_node_types', array());
+
+                        if (in_array($node->type, $warehouse_types) && !empty($node->uc_warehouse_id)) {
+                                foreach ($node->uc_warehouse_id as $warehouseId => $value) {
+                                        $query = 'SELECT 1 FROM {uc_warehouse_product} WHERE nid = %d and warehouse_id = %d';
+                                        $recordExists = db_result(db_query($query, $node->nid, $warehouseId));
+
+                                        // Warehouse was selected but now is not
+                                        if (($recordExists) && ($value == 0)) {
+                                                $query = 'DELETE FROM {uc_warehouse_product} WHERE nid = %d and warehouse_id = %d';
+                                                db_query($query, $node->nid, $warehouseId);
+                                                watchdog('content', 'uc_warehouse_product: Removed warehouse to nid %id.', array('%id' => $node->nid));
+                                        }
+                                        // Warehouse was not selected but now is
+                                        else if ((!$recordExists) && ($value != 0)) {
+                                                $table = 'uc_warehouse_product';
+                                                $record = new stdClass();
+                                                $record->nid = $node->nid;
+                                                $record->warehouse_id = $warehouseId;
+
+                                                drupal_write_record($table, $record);
+                                                watchdog('content', 'uc_warehouse_product: Added warehouse to nid %id.', array('%id' => $record->nid));
+                                        }
+                                }
+
+                                $query = 'SELECT 1 FROM {uc_warehouse_product_config} WHERE nid = %d';
+                                $recordExists = db_result(db_query($query, $node->nid));
+
+                                if (!$recordExists) {
+                                                $table = 'uc_warehouse_product_config';
+                                                $record = new stdClass();
+                                                $record->nid = $node->nid;
+                                                $record->ship_separately = $node->uc_warehouse_ship_separately;
+                                                drupal_write_record($table, $record);
+                                }
+                                else {
+                                        $table = 'uc_warehouse_product_config';
+                                        $record = new stdClass();
+                                        $record->nid = $node->nid;
+                                        $record->ship_separately = $node->uc_warehouse_ship_separately;
+                                        drupal_write_record($table, $record, array('nid'));
+                                }
+                        }
+                        break;
+
+                case 'delete':
+                        db_query('DELETE FROM {uc_warehouse_product} WHERE nid = %d', $node->nid);
+                        db_query('DELETE FROM {uc_warehouse_product_config} WHERE nid = %d', $node->nid);
+                        break;
+        }
+}
+
+
+function uc_warehouse_order($op, &$arg1, $arg2) {
+        switch ($op) {
+                case 'save':
+    //die(print_r($arg1));
+    break;
+
+    case 'submit':
+        $path = drupal_get_path('module', 'uc_warehouse');
+        require_once($path . '/uc_warehouse_order.inc');
+
+        createWarehousePackages($arg1);
+        $orderWarehouses = variable_get('uc_order_warehouses', Array());
+        //print_r($orderWarehouses);
+        //echo '<br />order:<br/>';
+    //die(print_r($arg1));
+    break;
+}
+}
+
+
+?>

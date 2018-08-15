@@ -1,0 +1,17 @@
+; $Id: uc_views_attribute.info,v 1.1.2.3 2010/01/19 18:08:58 hanoii Exp $
+name = Ubercart Views Attribute
+description = Create views on Ubercart Attribute data.
+dependencies[] = uc_stock
+dependencies[] = uc_product
+dependencies[] = uc_order
+dependencies[] = uc_attribute
+dependencies[] = views
+package = "Ubercart - views"
+core = 7.x
+
+
+files[] = views/uc_views_attribute_handler_field_order_product_attribute.inc
+files[] = views/uc_views_attribute_handler_field_combination.inc
+files[] = views/uc_views_attribute_handler_field_combination_price.inc
+files[] = views/uc_views_attribute_handler_filter_attr.inc
+

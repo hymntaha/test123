@@ -1,0 +1,25 @@
+<?php
+  
+/**
+ * Implementation of hook_install().
+ */
+function joycone_install() {
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function joycone_uninstall() {
+}
+
+/**
+ * Implementation of hook_enable().
+ */
+function joycone_enable() {
+}
+
+/**
+ * Implementation of hook_disable().
+ */
+function joycone_disable() {
+}

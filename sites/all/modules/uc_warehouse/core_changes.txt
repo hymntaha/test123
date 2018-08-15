@@ -1,0 +1,7 @@
+uc_quote.pages.inc
+- uc_quote_request_quotes changed to call the warehouse fucntions to build possible packages
+
+index.php
+The index.php file in the Drupal root has been altered to include a custom class.  I am storing an array of
+instances of the custom class Warehouse.  Therefore the Warehouseclass needs defined before any session work
+is done otherwise the object give the __PHP_Incomplete_Class Object error.

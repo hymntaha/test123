@@ -1,0 +1,2896 @@
+--------------------------------------------------
+Mon Feb 24 21:11:50 UTC 2014 : () setupOrderWarehouses - Starting warehouse setup
+--------------------------------------------------
+Mon Feb 24 21:11:50 UTC 2014 : () Order Dump
+stdClass Object
+(
+    [uid] => 1
+    [products] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [nid] => 32391
+                    [title] => 3MWG Palette Tray
+                    [model] => U400990003001
+                    [qty] => 1
+                    [cost] => 0.00000
+                    [price] => 16.58000
+                    [weight] => 0.65
+                    [data] => Array
+                        (
+                            [shippable] => 1
+                            [module] => uc_product
+                        )
+
+                    [type] => product
+                    [language] => 
+                    [uid] => 1
+                    [status] => 1
+                    [created] => 1392824926
+                    [changed] => 1393261638
+                    [comment] => 0
+                    [promote] => 1
+                    [moderate] => 0
+                    [sticky] => 0
+                    [tnid] => 0
+                    [translate] => 0
+                    [vid] => 32391
+                    [revision_uid] => 1
+                    [body] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                    [teaser] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                    [log] => 
+                    [revision_timestamp] => 1393261638
+                    [format] => 1
+                    [name] => bcadmin
+                    [picture] => 
+                    [list_price] => 0.00000
+                    [sell_price] => 16.58000
+                    [weight_units] => lb
+                    [length] => 15
+                    [width] => 11
+                    [height] => 9
+                    [length_units] => in
+                    [pkg_qty] => 1
+                    [default_qty] => 1
+                    [unique_hash] => 0049a1d018bc50f775895ba5df994e3d
+                    [ordering] => 0
+                    [shippable] => 1
+                    [path] => food-service/products/3mwg-palette-tray
+                    [field_hero_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_image_cache] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [fid] => 236
+                                    [uid] => 1
+                                    [filename] => 3MWG-Palette-Tray.jpg
+                                    [filepath] => sites/default/files/products/thumbs/3MWG-Palette-Tray.jpg
+                                    [filemime] => image/jpeg
+                                    [filesize] => 13465
+                                    [status] => 1
+                                    [timestamp] => 1392824926
+                                    [list] => 1
+                                    [data] => Array
+                                        (
+                                            [alt] => 
+                                            [title] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [field_instore] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [value] => 0
+                                )
+
+                        )
+
+                    [field_nutr_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_pkg_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_puck] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [nid] => 
+                                )
+
+                        )
+
+                    [field_recipes] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [value] => 0
+                                )
+
+                        )
+
+                    [field_recipe_image] => Array
+                        (
+                            [0] => 
+                            [1] => 
+                        )
+
+                    [uc_warehouse_id] => Array
+                        (
+                            [1] => 1
+                        )
+
+                    [uc_warehouse_ship_separately] => 0
+                    [last_comment_timestamp] => 1392824926
+                    [last_comment_name] => 
+                    [comment_count] => 0
+                    [taxonomy] => Array
+                        (
+                            [25] => stdClass Object
+                                (
+                                    [tid] => 25
+                                    [vid] => 1
+                                    [name] => Kids Cone® Equipment
+                                    [description] => 
+                                    [weight] => 1
+                                    [v_weight_unused] => 0
+                                )
+
+                        )
+
+                    [flatrate] => Array
+                        (
+                        )
+
+                    [shipping_type] => small_package
+                    [shipping_address] => stdClass Object
+                        (
+                            [first_name] => 
+                            [last_name] => 
+                            [company] => Joy Cone Company
+                            [street1] => 3435 Lamor Road
+                            [street2] => 
+                            [city] => Hermitage
+                            [zone] => 51
+                            [postal_code] => 16148
+                            [country] => 840
+                            [phone] => 
+                        )
+
+                    [ups] => Array
+                        (
+                            [vid] => 32391
+                            [nid] => 32391
+                            [pkg_type] => 02
+                        )
+
+                )
+
+            [1] => stdClass Object
+                (
+                    [nid] => 32428
+                    [title] => Joy Waffle Bowls
+                    [model] => N300661100NP2
+                    [qty] => 1
+                    [cost] => 0.00000
+                    [price] => 65.60000
+                    [weight] => 20.05
+                    [data] => Array
+                        (
+                            [shippable] => 1
+                            [module] => uc_product
+                        )
+
+                    [type] => product
+                    [language] => 
+                    [uid] => 1
+                    [status] => 1
+                    [created] => 1393013316
+                    [changed] => 1393013316
+                    [comment] => 0
+                    [promote] => 1
+                    [moderate] => 0
+                    [sticky] => 0
+                    [tnid] => 0
+                    [translate] => 0
+                    [vid] => 32428
+                    [revision_uid] => 1
+                    [body] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                    [teaser] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                    [log] => 
+                    [revision_timestamp] => 1393013316
+                    [format] => 1
+                    [name] => bcadmin
+                    [picture] => 
+                    [list_price] => 0.00000
+                    [sell_price] => 65.60000
+                    [weight_units] => lb
+                    [length] => 21
+                    [width] => 15
+                    [height] => 35
+                    [length_units] => in
+                    [pkg_qty] => 1
+                    [default_qty] => 1
+                    [unique_hash] => e32934f9d49cbb243f36118fc9937ee8
+                    [ordering] => 0
+                    [shippable] => 1
+                    [path] => food-service/products/joy-waffle-bowls
+                    [field_hero_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_image_cache] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [fid] => 300
+                                    [uid] => 1
+                                    [filename] => waffle_bowl_lg_0.jpg
+                                    [filepath] => sites/default/files/products/thumbs/waffle_bowl_lg_0.jpg
+                                    [filemime] => image/jpeg
+                                    [filesize] => 25378
+                                    [status] => 1
+                                    [timestamp] => 1393013315
+                                    [list] => 1
+                                    [data] => Array
+                                        (
+                                            [alt] => 
+                                            [title] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [field_instore] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [value] => 0
+                                )
+
+                        )
+
+                    [field_nutr_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_pkg_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_puck] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [nid] => 
+                                )
+
+                        )
+
+                    [field_recipes] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [value] => 0
+                                )
+
+                        )
+
+                    [field_recipe_image] => Array
+                        (
+                            [0] => 
+                            [1] => 
+                        )
+
+                    [uc_warehouse_id] => Array
+                        (
+                            [1] => 1
+                            [2] => 2
+                        )
+
+                    [uc_warehouse_ship_separately] => 0
+                    [last_comment_timestamp] => 1393013316
+                    [last_comment_name] => 
+                    [comment_count] => 0
+                    [taxonomy] => Array
+                        (
+                            [31] => stdClass Object
+                                (
+                                    [tid] => 31
+                                    [vid] => 1
+                                    [name] => Waffle Bowl
+                                    [description] => 
+                                    [weight] => 7
+                                    [v_weight_unused] => 0
+                                )
+
+                        )
+
+                    [flatrate] => Array
+                        (
+                        )
+
+                    [shipping_type] => small_package
+                    [shipping_address] => stdClass Object
+                        (
+                            [first_name] => 
+                            [last_name] => 
+                            [company] => Joy Cone Company
+                            [street1] => 3435 Lamor Road
+                            [street2] => 
+                            [city] => Hermitage
+                            [zone] => 51
+                            [postal_code] => 16148
+                            [country] => 840
+                            [phone] => 
+                        )
+
+                    [ups] => Array
+                        (
+                            [vid] => 32428
+                            [nid] => 32428
+                            [pkg_type] => 02
+                        )
+
+                )
+
+        )
+
+    [delivery_country] => 840
+    [delivery_zone] => 4
+    [delivery_postal_code] => 85003
+    [order_total] => 82.18
+)
+
+--------------------------------------------------
+Mon Feb 24 21:11:50 UTC 2014 : () loadWarehouse - Warehouse Dump
+Array
+(
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+        )
+
+    [2] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:11:53 UTC 2014 : () setWarehousePriorityRates - Warehouse Dump
+Array
+(
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 18.63
+        )
+
+    [2] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 12.55
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:11:53 UTC 2014 : () processSingleWarehouseProducts - Warehouse Dump
+Array
+(
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 1
+            [priority] => 0
+            [priority_rate] => 18.63
+            [products] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [nid] => 32391
+                            [title] => 3MWG Palette Tray
+                            [model] => U400990003001
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 16.58000
+                            [weight] => 0.65
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1392824926
+                            [changed] => 1393261638
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32391
+                            [revision_uid] => 1
+                            [body] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [teaser] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [log] => 
+                            [revision_timestamp] => 1393261638
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 16.58000
+                            [weight_units] => lb
+                            [length] => 15
+                            [width] => 11
+                            [height] => 9
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => 0049a1d018bc50f775895ba5df994e3d
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/3mwg-palette-tray
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 236
+                                            [uid] => 1
+                                            [filename] => 3MWG-Palette-Tray.jpg
+                                            [filepath] => sites/default/files/products/thumbs/3MWG-Palette-Tray.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 13465
+                                            [status] => 1
+                                            [timestamp] => 1392824926
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                )
+
+                            [uc_warehouse_ship_separately] => 0
+                            [last_comment_timestamp] => 1392824926
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [25] => stdClass Object
+                                        (
+                                            [tid] => 25
+                                            [vid] => 1
+                                            [name] => Kids Cone® Equipment
+                                            [description] => 
+                                            [weight] => 1
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32391
+                                    [nid] => 32391
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [2] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 12.55
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:11:53 UTC 2014 : () addProductsToWarehouseByPriority - Warehouse Dump
+Array
+(
+    [0] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 1
+            [priority] => 0
+            [priority_rate] => 18.63
+            [products] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [nid] => 32391
+                            [title] => 3MWG Palette Tray
+                            [model] => U400990003001
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 16.58000
+                            [weight] => 0.65
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1392824926
+                            [changed] => 1393261638
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32391
+                            [revision_uid] => 1
+                            [body] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [teaser] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [log] => 
+                            [revision_timestamp] => 1393261638
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 16.58000
+                            [weight_units] => lb
+                            [length] => 15
+                            [width] => 11
+                            [height] => 9
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => 0049a1d018bc50f775895ba5df994e3d
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/3mwg-palette-tray
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 236
+                                            [uid] => 1
+                                            [filename] => 3MWG-Palette-Tray.jpg
+                                            [filepath] => sites/default/files/products/thumbs/3MWG-Palette-Tray.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 13465
+                                            [status] => 1
+                                            [timestamp] => 1392824926
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                )
+
+                            [uc_warehouse_ship_separately] => 0
+                            [last_comment_timestamp] => 1392824926
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [25] => stdClass Object
+                                        (
+                                            [tid] => 25
+                                            [vid] => 1
+                                            [name] => Kids Cone® Equipment
+                                            [description] => 
+                                            [weight] => 1
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32391
+                                    [nid] => 32391
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [nid] => 32428
+                            [title] => Joy Waffle Bowls
+                            [model] => N300661100NP2
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 65.60000
+                            [weight] => 20.05
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1393013316
+                            [changed] => 1393013316
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32428
+                            [revision_uid] => 1
+                            [body] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                            [teaser] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                            [log] => 
+                            [revision_timestamp] => 1393013316
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 65.60000
+                            [weight_units] => lb
+                            [length] => 21
+                            [width] => 15
+                            [height] => 35
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => e32934f9d49cbb243f36118fc9937ee8
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/joy-waffle-bowls
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 300
+                                            [uid] => 1
+                                            [filename] => waffle_bowl_lg_0.jpg
+                                            [filepath] => sites/default/files/products/thumbs/waffle_bowl_lg_0.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 25378
+                                            [status] => 1
+                                            [timestamp] => 1393013315
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                    [2] => 2
+                                )
+
+                            [uc_warehouse_ship_separately] => 0
+                            [last_comment_timestamp] => 1393013316
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [31] => stdClass Object
+                                        (
+                                            [tid] => 31
+                                            [vid] => 1
+                                            [name] => Waffle Bowl
+                                            [description] => 
+                                            [weight] => 7
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32428
+                                    [nid] => 32428
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 12.55
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:11:53 UTC 2014 : () setupOrderWarehouses - Warehouse Dump (variable set)
+cartid=1
+Array
+(
+    [0] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 1
+            [priority] => 0
+            [priority_rate] => 18.63
+            [products] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [nid] => 32391
+                            [title] => 3MWG Palette Tray
+                            [model] => U400990003001
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 16.58000
+                            [weight] => 0.65
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1392824926
+                            [changed] => 1393261638
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32391
+                            [revision_uid] => 1
+                            [body] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [teaser] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [log] => 
+                            [revision_timestamp] => 1393261638
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 16.58000
+                            [weight_units] => lb
+                            [length] => 15
+                            [width] => 11
+                            [height] => 9
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => 0049a1d018bc50f775895ba5df994e3d
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/3mwg-palette-tray
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 236
+                                            [uid] => 1
+                                            [filename] => 3MWG-Palette-Tray.jpg
+                                            [filepath] => sites/default/files/products/thumbs/3MWG-Palette-Tray.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 13465
+                                            [status] => 1
+                                            [timestamp] => 1392824926
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                )
+
+                            [uc_warehouse_ship_separately] => 0
+                            [last_comment_timestamp] => 1392824926
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [25] => stdClass Object
+                                        (
+                                            [tid] => 25
+                                            [vid] => 1
+                                            [name] => Kids Cone® Equipment
+                                            [description] => 
+                                            [weight] => 1
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32391
+                                    [nid] => 32391
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [nid] => 32428
+                            [title] => Joy Waffle Bowls
+                            [model] => N300661100NP2
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 65.60000
+                            [weight] => 20.05
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1393013316
+                            [changed] => 1393013316
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32428
+                            [revision_uid] => 1
+                            [body] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                            [teaser] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                            [log] => 
+                            [revision_timestamp] => 1393013316
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 65.60000
+                            [weight_units] => lb
+                            [length] => 21
+                            [width] => 15
+                            [height] => 35
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => e32934f9d49cbb243f36118fc9937ee8
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/joy-waffle-bowls
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 300
+                                            [uid] => 1
+                                            [filename] => waffle_bowl_lg_0.jpg
+                                            [filepath] => sites/default/files/products/thumbs/waffle_bowl_lg_0.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 25378
+                                            [status] => 1
+                                            [timestamp] => 1393013315
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                    [2] => 2
+                                )
+
+                            [uc_warehouse_ship_separately] => 0
+                            [last_comment_timestamp] => 1393013316
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [31] => stdClass Object
+                                        (
+                                            [tid] => 31
+                                            [vid] => 1
+                                            [name] => Waffle Bowl
+                                            [description] => 
+                                            [weight] => 7
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32428
+                                    [nid] => 32428
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 12.55
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:11:53 UTC 2014 : () End warehouse setup
+--------------------------------------------------
+Mon Feb 24 21:11:53 UTC 2014 : () getUPSWarehousePackages - Package dump
+cartid=1
+stdClass Object
+(
+    [orig] => Array
+        (
+            [street1] => 3435 Lamor Road
+            [street2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+        )
+
+    [weight] => 20.7
+    [qty] => 1
+    [price] => 82.18
+    [length_units] => in
+    [weight_units] => lb
+    [pkg_type] => 02
+    [length] => 21
+    [width] => 15
+    [height] => 35
+)
+
+--------------------------------------------------
+Mon Feb 24 21:11:53 UTC 2014 : () getUPSWarehousePackages - Package dump
+cartid=1
+stdClass Object
+(
+    [orig] => Array
+        (
+            [street1] => 2843 W. Shamrell Blvd.
+            [street2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+        )
+
+    [weight] => 0
+    [qty] => 1
+    [price] => 0
+    [length_units] => in
+    [weight_units] => lb
+)
+
+--------------------------------------------------
+Mon Feb 24 21:24:16 UTC 2014 : () setupOrderWarehouses - Starting warehouse setup
+--------------------------------------------------
+Mon Feb 24 21:24:16 UTC 2014 : () Order Dump
+stdClass Object
+(
+    [uid] => 1
+    [products] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [nid] => 32391
+                    [title] => 3MWG Palette Tray
+                    [model] => U400990003001
+                    [qty] => 1
+                    [cost] => 0.00000
+                    [price] => 16.58000
+                    [weight] => 0.65
+                    [data] => Array
+                        (
+                            [shippable] => 1
+                            [module] => uc_product
+                        )
+
+                    [type] => product
+                    [language] => 
+                    [uid] => 1
+                    [status] => 1
+                    [created] => 1392824926
+                    [changed] => 1393261638
+                    [comment] => 0
+                    [promote] => 1
+                    [moderate] => 0
+                    [sticky] => 0
+                    [tnid] => 0
+                    [translate] => 0
+                    [vid] => 32391
+                    [revision_uid] => 1
+                    [body] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                    [teaser] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                    [log] => 
+                    [revision_timestamp] => 1393261638
+                    [format] => 1
+                    [name] => bcadmin
+                    [picture] => 
+                    [list_price] => 0.00000
+                    [sell_price] => 16.58000
+                    [weight_units] => lb
+                    [length] => 15
+                    [width] => 11
+                    [height] => 9
+                    [length_units] => in
+                    [pkg_qty] => 1
+                    [default_qty] => 1
+                    [unique_hash] => 0049a1d018bc50f775895ba5df994e3d
+                    [ordering] => 0
+                    [shippable] => 1
+                    [path] => food-service/products/3mwg-palette-tray
+                    [field_hero_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_image_cache] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [fid] => 236
+                                    [uid] => 1
+                                    [filename] => 3MWG-Palette-Tray.jpg
+                                    [filepath] => sites/default/files/products/thumbs/3MWG-Palette-Tray.jpg
+                                    [filemime] => image/jpeg
+                                    [filesize] => 13465
+                                    [status] => 1
+                                    [timestamp] => 1392824926
+                                    [list] => 1
+                                    [data] => Array
+                                        (
+                                            [alt] => 
+                                            [title] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [field_instore] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [value] => 0
+                                )
+
+                        )
+
+                    [field_nutr_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_pkg_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_puck] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [nid] => 
+                                )
+
+                        )
+
+                    [field_recipes] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [value] => 0
+                                )
+
+                        )
+
+                    [field_recipe_image] => Array
+                        (
+                            [0] => 
+                            [1] => 
+                        )
+
+                    [uc_warehouse_id] => Array
+                        (
+                            [1] => 1
+                        )
+
+                    [uc_warehouse_ship_separately] => 0
+                    [last_comment_timestamp] => 1392824926
+                    [last_comment_name] => 
+                    [comment_count] => 0
+                    [taxonomy] => Array
+                        (
+                            [25] => stdClass Object
+                                (
+                                    [tid] => 25
+                                    [vid] => 1
+                                    [name] => Kids Cone® Equipment
+                                    [description] => 
+                                    [weight] => 1
+                                    [v_weight_unused] => 0
+                                )
+
+                        )
+
+                    [flatrate] => Array
+                        (
+                        )
+
+                    [shipping_type] => small_package
+                    [shipping_address] => stdClass Object
+                        (
+                            [first_name] => 
+                            [last_name] => 
+                            [company] => Joy Cone Company
+                            [street1] => 3435 Lamor Road
+                            [street2] => 
+                            [city] => Hermitage
+                            [zone] => 51
+                            [postal_code] => 16148
+                            [country] => 840
+                            [phone] => 
+                        )
+
+                    [ups] => Array
+                        (
+                            [vid] => 32391
+                            [nid] => 32391
+                            [pkg_type] => 02
+                        )
+
+                )
+
+            [1] => stdClass Object
+                (
+                    [nid] => 32428
+                    [title] => Joy Waffle Bowls
+                    [model] => N300661100NP2
+                    [qty] => 1
+                    [cost] => 0.00000
+                    [price] => 65.60000
+                    [weight] => 20.05
+                    [data] => Array
+                        (
+                            [shippable] => 1
+                            [module] => uc_product
+                        )
+
+                    [type] => product
+                    [language] => 
+                    [uid] => 1
+                    [status] => 1
+                    [created] => 1393013316
+                    [changed] => 1393277048
+                    [comment] => 0
+                    [promote] => 1
+                    [moderate] => 0
+                    [sticky] => 0
+                    [tnid] => 0
+                    [translate] => 0
+                    [vid] => 32428
+                    [revision_uid] => 1
+                    [body] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                    [teaser] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                    [log] => 
+                    [revision_timestamp] => 1393277048
+                    [format] => 1
+                    [name] => bcadmin
+                    [picture] => 
+                    [list_price] => 0.00000
+                    [sell_price] => 65.60000
+                    [weight_units] => lb
+                    [length] => 21
+                    [width] => 15
+                    [height] => 35
+                    [length_units] => in
+                    [pkg_qty] => 1
+                    [default_qty] => 1
+                    [unique_hash] => e32934f9d49cbb243f36118fc9937ee8
+                    [ordering] => 0
+                    [shippable] => 1
+                    [path] => food-service/products/joy-waffle-bowls
+                    [field_hero_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_image_cache] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [fid] => 300
+                                    [uid] => 1
+                                    [filename] => waffle_bowl_lg_0.jpg
+                                    [filepath] => sites/default/files/products/thumbs/waffle_bowl_lg_0.jpg
+                                    [filemime] => image/jpeg
+                                    [filesize] => 25378
+                                    [status] => 1
+                                    [timestamp] => 1393013315
+                                    [list] => 1
+                                    [data] => Array
+                                        (
+                                            [alt] => 
+                                            [title] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [field_instore] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [value] => 0
+                                )
+
+                        )
+
+                    [field_nutr_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_pkg_image] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [field_puck] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [nid] => 
+                                )
+
+                        )
+
+                    [field_recipes] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [value] => 0
+                                )
+
+                        )
+
+                    [field_recipe_image] => Array
+                        (
+                            [0] => 
+                            [1] => 
+                        )
+
+                    [uc_warehouse_id] => Array
+                        (
+                            [1] => 1
+                            [2] => 2
+                        )
+
+                    [uc_warehouse_ship_separately] => 1
+                    [last_comment_timestamp] => 1393013316
+                    [last_comment_name] => 
+                    [comment_count] => 0
+                    [taxonomy] => Array
+                        (
+                            [31] => stdClass Object
+                                (
+                                    [tid] => 31
+                                    [vid] => 1
+                                    [name] => Waffle Bowl
+                                    [description] => 
+                                    [weight] => 7
+                                    [v_weight_unused] => 0
+                                )
+
+                        )
+
+                    [flatrate] => Array
+                        (
+                        )
+
+                    [shipping_type] => small_package
+                    [shipping_address] => stdClass Object
+                        (
+                            [first_name] => 
+                            [last_name] => 
+                            [company] => Joy Cone Company
+                            [street1] => 3435 Lamor Road
+                            [street2] => 
+                            [city] => Hermitage
+                            [zone] => 51
+                            [postal_code] => 16148
+                            [country] => 840
+                            [phone] => 
+                        )
+
+                    [ups] => Array
+                        (
+                            [vid] => 32428
+                            [nid] => 32428
+                            [pkg_type] => 02
+                        )
+
+                )
+
+        )
+
+    [delivery_country] => 840
+    [delivery_zone] => 4
+    [delivery_postal_code] => 85003
+    [order_total] => 82.18
+)
+
+--------------------------------------------------
+Mon Feb 24 21:24:16 UTC 2014 : () loadWarehouse - Warehouse Dump
+Array
+(
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+        )
+
+    [2] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:24:20 UTC 2014 : () setWarehousePriorityRates - Warehouse Dump
+Array
+(
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 18.63
+        )
+
+    [2] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 12.55
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:24:20 UTC 2014 : () processSingleWarehouseProducts - Warehouse Dump
+Array
+(
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 1
+            [priority] => 0
+            [priority_rate] => 18.63
+            [products] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [nid] => 32391
+                            [title] => 3MWG Palette Tray
+                            [model] => U400990003001
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 16.58000
+                            [weight] => 0.65
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1392824926
+                            [changed] => 1393261638
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32391
+                            [revision_uid] => 1
+                            [body] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [teaser] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [log] => 
+                            [revision_timestamp] => 1393261638
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 16.58000
+                            [weight_units] => lb
+                            [length] => 15
+                            [width] => 11
+                            [height] => 9
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => 0049a1d018bc50f775895ba5df994e3d
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/3mwg-palette-tray
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 236
+                                            [uid] => 1
+                                            [filename] => 3MWG-Palette-Tray.jpg
+                                            [filepath] => sites/default/files/products/thumbs/3MWG-Palette-Tray.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 13465
+                                            [status] => 1
+                                            [timestamp] => 1392824926
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                )
+
+                            [uc_warehouse_ship_separately] => 0
+                            [last_comment_timestamp] => 1392824926
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [25] => stdClass Object
+                                        (
+                                            [tid] => 25
+                                            [vid] => 1
+                                            [name] => Kids Cone® Equipment
+                                            [description] => 
+                                            [weight] => 1
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32391
+                                    [nid] => 32391
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [2] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 12.55
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:24:20 UTC 2014 : () addProductsToWarehouseByPriority - Warehouse Dump
+Array
+(
+    [0] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 1
+            [priority] => 0
+            [priority_rate] => 18.63
+            [products] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [nid] => 32391
+                            [title] => 3MWG Palette Tray
+                            [model] => U400990003001
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 16.58000
+                            [weight] => 0.65
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1392824926
+                            [changed] => 1393261638
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32391
+                            [revision_uid] => 1
+                            [body] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [teaser] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [log] => 
+                            [revision_timestamp] => 1393261638
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 16.58000
+                            [weight_units] => lb
+                            [length] => 15
+                            [width] => 11
+                            [height] => 9
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => 0049a1d018bc50f775895ba5df994e3d
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/3mwg-palette-tray
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 236
+                                            [uid] => 1
+                                            [filename] => 3MWG-Palette-Tray.jpg
+                                            [filepath] => sites/default/files/products/thumbs/3MWG-Palette-Tray.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 13465
+                                            [status] => 1
+                                            [timestamp] => 1392824926
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                )
+
+                            [uc_warehouse_ship_separately] => 0
+                            [last_comment_timestamp] => 1392824926
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [25] => stdClass Object
+                                        (
+                                            [tid] => 25
+                                            [vid] => 1
+                                            [name] => Kids Cone® Equipment
+                                            [description] => 
+                                            [weight] => 1
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32391
+                                    [nid] => 32391
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [nid] => 32428
+                            [title] => Joy Waffle Bowls
+                            [model] => N300661100NP2
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 65.60000
+                            [weight] => 20.05
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1393013316
+                            [changed] => 1393277048
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32428
+                            [revision_uid] => 1
+                            [body] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                            [teaser] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                            [log] => 
+                            [revision_timestamp] => 1393277048
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 65.60000
+                            [weight_units] => lb
+                            [length] => 21
+                            [width] => 15
+                            [height] => 35
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => e32934f9d49cbb243f36118fc9937ee8
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/joy-waffle-bowls
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 300
+                                            [uid] => 1
+                                            [filename] => waffle_bowl_lg_0.jpg
+                                            [filepath] => sites/default/files/products/thumbs/waffle_bowl_lg_0.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 25378
+                                            [status] => 1
+                                            [timestamp] => 1393013315
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                    [2] => 2
+                                )
+
+                            [uc_warehouse_ship_separately] => 1
+                            [last_comment_timestamp] => 1393013316
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [31] => stdClass Object
+                                        (
+                                            [tid] => 31
+                                            [vid] => 1
+                                            [name] => Waffle Bowl
+                                            [description] => 
+                                            [weight] => 7
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32428
+                                    [nid] => 32428
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 12.55
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:24:20 UTC 2014 : () setupOrderWarehouses - Warehouse Dump (variable set)
+cartid=1
+Array
+(
+    [0] => Warehouse Object
+        (
+            [warehouse_id] => 1
+            [street_address_1] => 3435 Lamor Road
+            [street_address_2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+            [has_exclusive_products] => 1
+            [priority] => 0
+            [priority_rate] => 18.63
+            [products] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [nid] => 32391
+                            [title] => 3MWG Palette Tray
+                            [model] => U400990003001
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 16.58000
+                            [weight] => 0.65
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1392824926
+                            [changed] => 1393261638
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32391
+                            [revision_uid] => 1
+                            [body] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [teaser] => <p>3MWG Palette Tray - For use with Joy Kids Cones® only.</p><p>Plastic tray that resembles an artist's palette. The tray has a thumb hole for easy handling. The tray holds 14 Joy Kids Cones® and is ideal for product sampling as well as serving children. Cones pictured are not included. All sales are final.</p><p>Dimensions: 12 1/4" X 8 3/4" X 7/8"</p>
+                            [log] => 
+                            [revision_timestamp] => 1393261638
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 16.58000
+                            [weight_units] => lb
+                            [length] => 15
+                            [width] => 11
+                            [height] => 9
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => 0049a1d018bc50f775895ba5df994e3d
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/3mwg-palette-tray
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 236
+                                            [uid] => 1
+                                            [filename] => 3MWG-Palette-Tray.jpg
+                                            [filepath] => sites/default/files/products/thumbs/3MWG-Palette-Tray.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 13465
+                                            [status] => 1
+                                            [timestamp] => 1392824926
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                )
+
+                            [uc_warehouse_ship_separately] => 0
+                            [last_comment_timestamp] => 1392824926
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [25] => stdClass Object
+                                        (
+                                            [tid] => 25
+                                            [vid] => 1
+                                            [name] => Kids Cone® Equipment
+                                            [description] => 
+                                            [weight] => 1
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32391
+                                    [nid] => 32391
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [nid] => 32428
+                            [title] => Joy Waffle Bowls
+                            [model] => N300661100NP2
+                            [qty] => 1
+                            [cost] => 0.00000
+                            [price] => 65.60000
+                            [weight] => 20.05
+                            [data] => Array
+                                (
+                                    [shippable] => 1
+                                    [module] => uc_product
+                                )
+
+                            [type] => product
+                            [language] => 
+                            [uid] => 1
+                            [status] => 1
+                            [created] => 1393013316
+                            [changed] => 1393277048
+                            [comment] => 0
+                            [promote] => 1
+                            [moderate] => 0
+                            [sticky] => 0
+                            [tnid] => 0
+                            [translate] => 0
+                            [vid] => 32428
+                            [revision_uid] => 1
+                            [body] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                            [teaser] => <p>Joy Waffle Bowl - 4 boxes of 60 cones per box for a total of 240 cones per case - 10 oz capacity. &nbsp;We cannot sell partial cases. &nbsp;All sales are final.</p>
+                            [log] => 
+                            [revision_timestamp] => 1393277048
+                            [format] => 1
+                            [name] => bcadmin
+                            [picture] => 
+                            [list_price] => 0.00000
+                            [sell_price] => 65.60000
+                            [weight_units] => lb
+                            [length] => 21
+                            [width] => 15
+                            [height] => 35
+                            [length_units] => in
+                            [pkg_qty] => 1
+                            [default_qty] => 1
+                            [unique_hash] => e32934f9d49cbb243f36118fc9937ee8
+                            [ordering] => 0
+                            [shippable] => 1
+                            [path] => food-service/products/joy-waffle-bowls
+                            [field_hero_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_image_cache] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [fid] => 300
+                                            [uid] => 1
+                                            [filename] => waffle_bowl_lg_0.jpg
+                                            [filepath] => sites/default/files/products/thumbs/waffle_bowl_lg_0.jpg
+                                            [filemime] => image/jpeg
+                                            [filesize] => 25378
+                                            [status] => 1
+                                            [timestamp] => 1393013315
+                                            [list] => 1
+                                            [data] => Array
+                                                (
+                                                    [alt] => 
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [field_instore] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_nutr_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_pkg_image] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [field_puck] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [nid] => 
+                                        )
+
+                                )
+
+                            [field_recipes] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [value] => 0
+                                        )
+
+                                )
+
+                            [field_recipe_image] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [uc_warehouse_id] => Array
+                                (
+                                    [1] => 1
+                                    [2] => 2
+                                )
+
+                            [uc_warehouse_ship_separately] => 1
+                            [last_comment_timestamp] => 1393013316
+                            [last_comment_name] => 
+                            [comment_count] => 0
+                            [taxonomy] => Array
+                                (
+                                    [31] => stdClass Object
+                                        (
+                                            [tid] => 31
+                                            [vid] => 1
+                                            [name] => Waffle Bowl
+                                            [description] => 
+                                            [weight] => 7
+                                            [v_weight_unused] => 0
+                                        )
+
+                                )
+
+                            [flatrate] => Array
+                                (
+                                )
+
+                            [shipping_type] => small_package
+                            [shipping_address] => stdClass Object
+                                (
+                                    [first_name] => 
+                                    [last_name] => 
+                                    [company] => Joy Cone Company
+                                    [street1] => 3435 Lamor Road
+                                    [street2] => 
+                                    [city] => Hermitage
+                                    [zone] => 51
+                                    [postal_code] => 16148
+                                    [country] => 840
+                                    [phone] => 
+                                )
+
+                            [ups] => Array
+                                (
+                                    [vid] => 32428
+                                    [nid] => 32428
+                                    [pkg_type] => 02
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [1] => Warehouse Object
+        (
+            [warehouse_id] => 2
+            [street_address_1] => 2843 W. Shamrell Blvd.
+            [street_address_2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+            [has_exclusive_products] => 0
+            [priority] => 0
+            [priority_rate] => 12.55
+        )
+
+)
+
+--------------------------------------------------
+Mon Feb 24 21:24:20 UTC 2014 : () End warehouse setup
+--------------------------------------------------
+Mon Feb 24 21:24:20 UTC 2014 : () getUPSWarehousePackages - Package dump
+cartid=1
+stdClass Object
+(
+    [orig] => Array
+        (
+            [street1] => 3435 Lamor Road
+            [street2] => 
+            [city] => Hermitage
+            [zone] => 51
+            [postal_code] => 16148
+            [country] => 840
+        )
+
+    [weight] => 0.65
+    [qty] => 1
+    [price] => 16.58
+    [length_units] => in
+    [weight_units] => lb
+    [pkg_type] => 02
+    [length] => 15
+    [width] => 11
+    [height] => 9
+)
+
+--------------------------------------------------
+Mon Feb 24 21:24:20 UTC 2014 : () getUPSWarehousePackages - Package dump
+cartid=1
+stdClass Object
+(
+    [orig] => Array
+        (
+            [street1] => 2843 W. Shamrell Blvd.
+            [street2] => 
+            [city] => Flagstaff
+            [zone] => 4
+            [postal_code] => 86001
+            [country] => 840
+        )
+
+    [weight] => 0
+    [qty] => 1
+    [price] => 0
+    [length_units] => in
+    [weight_units] => lb
+)
+

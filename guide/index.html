@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Joy Cone | CMS Training Guide</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="/guide/favicon.ico" />
+	<!-- google fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:700,400">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script type="text/javascript" src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body id="top">
+	<noscript><style>a.fancybox{display:none;}ul.mobile-nav{display:block;}</style></noscript>
+	<div id="wrapper">
+		<!-- mobile menu -->
+		<header id="mobile-menu">
+			<div class="mobile-menu-button"><a href="#">open/close</a></div>
+				<ul class="mobile-nav">
+					<li><a href="#wrapper">table of contents</a></li>
+					<li><a href="#intro">intro</a></li>
+					<li><a href="#drupal-basics">Drupal basics</a></li>
+					<li><a href="#skus">SKUs</a></li>
+					<li><a href="#products">products &amp; categories</a></li>
+					<li><a href="#special">special pages</a></li>
+					<li><a href="#no_results">no results</a></li>
+					<li><a href="#node_represent">node represent</a></li>
+					<li><a href="#users">add users/change password</a></li>
+					<!--<li><a href="#design">style guide</a></li>-->
+					<li><a href="#typography">typography</a></li>
+					<li class="important"><a href="#important">important info</a></li>
+					<li><a href="#resources">resources</a></li>
+				</ul>
+		</header>
+		<aside id="menu">
+			<!-- desktop menu -->
+			<header id="header">
+				<h1><a href="#"><img src="/sites/all/themes/hw/img/joycone-logo.png" alt="Joy Cone"></a></h1>
+				<ul class="nav">
+					<li><a href="#wrapper">table of contents</a></li>
+					<li><a href="#intro">intro</a></li>
+					<li><a href="#drupal-basics">Drupal basics</a></li>
+					<li><a href="#skus">SKUs</a></li>
+					<li><a href="#products">products &amp; categories</a></li>
+					<li><a href="#special">special pages</a></li>
+					<li><a href="#no_results">no results</a></li>
+					<li><a href="#node_represent">node represent</a></li>
+					<li><a href="#users">add users/change password</a></li>
+					<!--<li><a href="#design">style guide</a></li>-->
+					<li><a href="#typography">typography</a></li>
+					<li class="important"><a href="#important">important info</a></li>
+					<li><a href="#resources">resources</a></li>
+				</ul>
+			</header>
+		</aside>
+		<article id="main">
+			<section id="table-of-contents">
+				<h2>Table of Contents</h2>
+				<br/>
+				<ul class="table-of-contents">
+					<li><a href="#wrapper">table of contents</a></li>
+					<li><a href="#intro">intro</a>
+						<ul>
+							<li><a href="#logging-in">logging in</a></li>
+						</ul>
+					</li>
+					<li><a href="#drupal-basics">Drupal basics</a>
+						<ul>
+							<li><a href="#which-is-what">which is what?</a>
+						</ul>
+					</li>
+					<li><a href="#skus">SKUs</a>
+						<ul>
+							<li><a href="#adding-skus">adding SKUs</a></li>
+                            <li><a href="#editing-skus">editing SKUs</a></li>
+						</ul>
+					</li>
+					<li><a href="#products">products &amp; categories</a>
+						<ul>
+							<li><a href="#adding-products">adding a product</a></li>
+                            <li><a href="#editing-products">editing a product</a></li>
+							<li><a href="#product-images">product images</a></li>
+							<li><a href="#product-description">product description</a></li>
+							<li><a href="#product-details">product details PDFs</a></li>
+							<li><a href="#product-skus">product SKUs</a></li>
+							<li><a href="#product-categories">product categories</a></li>
+							<li><a href="#product-brands">product brands</a></li>
+							<li><a href="#product-pucks">product pucks</a></li>
+							<li><a href="#editing-product-categories">editing product categories</a></li>
+							<li><a href="#unpublish-products">unpublish products</a></li>
+							<li><a href="#publish-products">publish products</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#special">special pages</a></li>
+					<li><a href="#no_results">no results</a></li>
+					<li><a href="#node_represent">node represent</a></li>
+					<li><a href="#users">add users/change password</a></li>
+					<!--<li><a href="#design">style guide</a></li>-->
+					<li><a href="#typography">typography</a></li>
+					<li><a href="#important">important info</a></li>
+					<li><a href="#resources">resources</a></li>
+				</ul>
+				<br/>
+				<a class="fancybox" href="images/joycone_homepage.jpg"><img class="lazy" data-original="images/joycone_homepage.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/joycone_homepage.jpg" alt="Joy Cone Guide"></noscript>
+			</section>
+		
+			<section id="intro">
+				<h2>Introduction</h2>
+				<p>Homewerksww.com is built upon the <strong>Drupal</strong> Content Management system.  <strong>Drupal</strong> allows for easy management of nearly all sections of the site.</p>
+                <br>
+			</section>
+			
+			<section id="logging-in">
+				<h3>Logging In</h3>
+				<p>In order to edit any portion of the site, the user must be logged in.</p>
+				<ol>
+					<li>Navigate your browser to &nbsp;<a href="http://www.joycone.com/user/login" target="_blank">http://www.joycone.com/user/login</a></li>
+					<li>Enter your &nbsp;<strong>Username</strong> and <strong>Password</strong>
+				</ol>
+				<a class="fancybox" href="images/admin_login.jpg"><img class="lazy" data-original="images/admin_login.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/admin_login.jpg" alt="Joy Cone Guide"></noscript>
+			</section>
+			
+			<section id="drupal-basics">
+				<h2>Drupal Basics</h2>
+				<p>From the <strong>Drupal</strong> user login, all portions of the site can be accessed by top menu that appears.  This portion of the CMS is referred to as the <strong>Admin Menu</strong></p>
+				<a class="fancybox" href="images/admin_menu_dropdown.jpg"><img class="lazy" data-original="images/admin_menu_dropdown.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/admin_menu_dropdown.jpg" alt="Joy Cone Guide"></noscript>
+				<p>The most important areas of the system are as follows:</p>
+				<ol>
+					<li><strong>Content management > Content</strong></li>
+					<li><strong>Content management > Create content</strong></li>
+					<li><strong>-- Homewerks -- > Special Pages </strong></li>
+				</ol>
+				<p>This guide will walk through how to edit each.  As you will see, much of Drupal is laid out in a similar manner and uses the same adding, deleting, editing, saving, etc. conventions.</p>
+			</section>
+			
+			<section id="which-is-what">
+				<h3>Which is What?</h3>
+				<p>You are now ready to edit Joy Cone.com, but how do you know what part of the site is what?  The guide details both the <strong>Admin Pages</strong> and the front end website they relate to, by showing images of both.</p>
+				<br/>
+			</section>
+			
+			<section id="navigation-menus">
+				<h2>Navigation Menus</h2>
+				<p>The Main Navigation menu on Homewerksww.com is on the left under the Joy Cone logo.</p>
+			</section>
+			
+			<section id="skus">
+				<h2>SKUs</h2>
+				<p>Many of the elements and content of Joy Cone.com (About, Terms, etc.) are <strong>Drupal</strong> content management items.  As far as editing goes, <strong>PRODUCT/SKUs</strong> are the easiest to edit in a <strong>Drupal</strong> CMS, as they are presented in an easy-to-use <strong>WYSIWYG</strong>(What You See Is What You Get.)
+				</p>
+			</section>
+			<section id="adding-skus">
+				<h3>Adding a SKU</h3>
+				<p>To add a <strong>SKU</strong>:</p>
+				<ol>
+					<li>Creating a <strong>SKU</strong> is the first required step before making a <strong>Product</strong>.</li>
+					<li>From the Drupal <strong>Admin Menu</strong>, click the <strong>Content management > Create content > SKU</strong> list item
+					<br/>
+					<a class="fancybox" href="images/admin_dropdown_sku.jpg"><img class="lazy" data-original="images/admin_dropdown_sku.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_dropdown_sku.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>A content creation section will appear:
+					<br/>
+					<a class="fancybox" href="images/admin_sku_add01.jpg"><img class="lazy" data-original="images/admin_sku_add01.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_sku_add01.jpg" alt="Joy Cone Guide"></noscript>
+					<li>The most important fields are <strong>SKU</strong>, <strong>DESCRIPTION</strong>, <strong>PART NO</strong> and the <strong>QUANTITY</strong>.
+						<ol>
+							<li>To add a <strong>SKU</strong>, enter the <strong>SKU</strong> in the text box.</li>
+							<li>Add a <strong>Description</strong> of the SKU to the text field below the SKU text box.</li>
+							<li>Add SKU again after the description in the input text labeled <strong>PART NO.</strong></li>
+							<li>Include the <strong>Quantity</strong> of the product in the text box.</li>
+						</ol>
+					<a class="fancybox" href="images/admin_sku_add02.jpg"><img class="lazy" data-original="images/admin_sku_add02.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_sku_add02.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>When a <strong>PRODUCT</strong> is finished being added, be sure to save.</li>
+				</ol>
+			</section>
+			<section id="editing-skus">
+				<h3>Editing a SKU</h3>
+				<p>To edit a <strong>SKU</strong>:</p>
+				<ul>
+					<li>From the website homepage click <strong>Products</strong> on the left sidebar and select the appropriate category for your product
+					<br/>
+					<a class="fancybox" href="images/admin_edit_product01.jpg"><img class="lazy" data-original="images/admin_edit_product01.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_edit_product01.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>You can enter the <strong>SKU</strong> into the <strong>search bar</strong> or enter a product keyword to locate the product to edit.
+					<a class="fancybox" href="images/admin_search.jpg"><img class="lazy" data-original="images/admin_search.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_search.jpg" alt="Joy Cone Guide"></noscript>
+					<a class="fancybox" href="images/admin_search_results.jpg"><img class="lazy" data-original="images/admin_search_results.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_search_results.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>A list of categories will appear, click on the corresponding <strong>Category</strong> for the product you wish to edit.  Most categories have sub-categories.
+					<br/>
+					<a class="fancybox" href="images/admin_edit_product02.jpg"><img class="lazy" data-original="images/admin_edit_product02.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_edit_product02.jpg" alt="Joy Cone Guide"></noscript>
+					<li>When you're logged on and in the correct sub-category for your product you'll see <strong>Edit this product</strong> under the <strong>Product Name</strong> and <strong>Edit</strong> at the bottom of the product container below <strong>Part No</strong>,<strong>Description</strong> and <strong>Carton Qty</strong>.</li>
+					<li>You can edit a <strong>SKU</strong> by clicking the <strong>Edit</strong> text below the <strong>Part No</strong>,<strong>Description</strong> and <strong>Carton Qty</strong>.</li>
+					<li>The link will take you to an <strong>Edit</strong> page for that <strong>SKU</strong>.
+					<a class="fancybox" href="images/admin_edit_product03.jpg"><img class="lazy" data-original="images/admin_edit_product03.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_edit_product03.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>Edit the <strong>SKU</strong> in the top text box.</li>
+					<li>Edit the <strong>DESCRIPTION</strong> of the SKU in the textfield.</li>
+					<li>Edit the <strong>PART NO.</strong> in the text box by entering the <strong>SKU</strong>.</li>
+					<li>Edit the <strong>QUANTITY</strong> for the <strong>SKU</strong>.</li>
+					<li>After making edits for the SKU make sure to <strong>SAVE</strong> at the bottom of the page
+                        <a class="fancybox" href="images/admin_sku_add02.jpg"><img class="lazy" data-original="images/admin_sku_add02.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+                        <noscript><img src="images/admin_sku_add02.jpg" alt="Joy Cone Guide"></noscript>
+                    </li>
+					<li>Review all edits to the products by clicking the <strong>Preview</strong> button to ensure structure after saving.</li>
+				</ul>
+			</section>
+			<section id="products">
+				<h2>Products</h2>
+				<p>The Joy Cone site uses <strong>Drupal</strong> for generating products.  <strong>Drupal</strong> is a very powerful system that allows you to manage products. In this guide, we will cover the most common and important tasks you will be using while updating the Joy Cone website
+				</p>
+			</section>
+			<section id="adding-products">
+				<h3>Adding a Product</h3>
+				<p>To add a <strong>Product</strong>:</p>
+				<ol>
+					<li>Before starting make sure you've <a href="#adding-skus">created a SKU</a> for the corresponding product.</li>
+					<li>From the Drupal <strong>Admin Menu</strong>, click the <strong>Content management > Create content > Product</strong> list item
+					<br/>
+					<a class="fancybox" href="images/admin_dropdown_product.jpg"><img class="lazy" data-original="images/admin_dropdown_product.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_dropdown_product.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>A content creation section will appear:
+					<br/>
+                    <li>The important fields are <strong>TITLE</strong>, <strong>IMAGE</strong>, <strong>BODY</strong>, <strong>PRODUCT DETAILS PDF</strong>, <strong>SKUs</strong> and the <strong>VOCABULARIES</strong>.</li>
+					<li>To add a <strong>TITLE</strong>, enter the <strong>Product name</strong> in the text box labeled <strong>TITLE</strong>.
+					</li>
+					<li>Add a <strong>Description</strong> of the product in the textfield labeled <strong>BODY</strong> located below the <strong>IMAGE</strong> field.</li>
+                    <li>To add a product PDF, click <strong>Choose File</strong> under the <strong>Product Details PDFs</strong> section and select your PDF to upload.  You will want to make sure you click <strong>Upload</strong>.</li>
+					<li>Add SKU, that you created in step 1, after the description in the input text labeled <strong>SKUs.</strong></li>
+					<li>Drupal appends <strong>[nid:]</strong> after the SKU, do not delete it.
+					<a class="fancybox" href="images/admin_appliance_hoses.jpg"><img class="lazy" data-original="images/admin_appliance_hoses.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_appliance_hoses.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>The right sidebar labeled <strong>VOCABULARIES</strong> let's you add <strong>CATEGORIES</strong>, <strong>BRANDS</strong> and <strong>PUCKS</strong>.</li>
+					<li>To select multiple <strong>CATEGORIES</strong> hold <strong>CTRL</strong> while clicking on each category.</li>
+					<li><strong>BRANDS</strong> should only be changed when a product is at the end of it's lifespan or if it does need to be updated.</li>
+					<li>To select multiple <strong>PUCKS</strong> hold <strong>CTRL</strong> while clicking on each puck.</li>
+					<li>Unselecting a category/puck is the same process as selecting, hold <strong>CTRL</strong> and click the highlighted category/puck.</li>
+					<li>When a <strong>Product</strong> is finished being added, be sure to save.</li>
+				</ol>
+			</section>
+			<section id="editing-products">
+				<h3>Editing a PRODUCT</h3>
+				<p>To edit a <strong>PRODUCT</strong>:</p>
+				<ol>
+					<li>From the website homepage click <strong>PRODUCTS</strong> on the left sidebar and select the appropriate category for your product.
+					<br/>
+					<a class="fancybox" href="images/admin_edit_product01.jpg"><img class="lazy" data-original="images/admin_edit_product01.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_edit_product01.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>You can enter the <strong>SKU</strong> into the <strong>search bar</strong> or enter a product keyword to locate the product to edit.
+					<a class="fancybox" href="images/admin_search.jpg"><img class="lazy" data-original="images/admin_search.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_search.jpg" alt="Joy Cone Guide"></noscript>
+					<a class="fancybox" href="images/admin_search_results.jpg"><img class="lazy" data-original="images/admin_search_results.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_search_results.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>A list of categories will appear, click on the corresponding <strong>Category</strong> for the product you wish to edit.  Most categories have sub-categories.
+					<br/>
+					<a class="fancybox" href="images/admin_edit_product02.jpg"><img class="lazy" data-original="images/admin_edit_product02.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_edit_product02.jpg" alt="Joy Cone Guide"></noscript>
+					<li>When you're logged on and in the correct sub-category for your product you'll see <strong>Edit this product</strong> under the <strong>Product Name</strong>.</li>
+					<li>You can edit a <strong>Product</strong> by clicking the <strong>Edit this product</strong> text below the product name.
+					</li>
+					<li>The link will take you to an <strong>Edit</strong> page for that product.
+					<a class="fancybox" href="images/admin_edit_product03.jpg"><img class="lazy" data-original="images/admin_edit_product03.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_edit_product03.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>Edit the <strong>TITLE</strong> of the product in the text field on the top.</li>
+					<li>Edit the <strong>IMAGE</strong> of the product by clicking <strong>Remove</strong> and uploading a new image.</li>
+					<li>Edit the <strong>DESCRIPTION</strong> in the textfield labeled <strong>BODY</strong>.</li>
+					<li>Edit the <strong>SKUs</strong> to the corresponding product in the text box labeled <strong>SKUs</strong>.</li>
+					<li>After entering the edits for the product make sure to <strong>SAVE</strong> at the bottom of the page.</li>
+					<li>The right sidebar labeled <strong>VOCABULARIES</strong> let's you edit <strong>CATEGORIES</strong>, <strong>BRANDS</strong> and <strong>PUCKS</strong>.</li>
+					<li>To select multiple <strong>CATEGORIES</strong> hold <strong>CTRL</strong> while clicking on each category.</li>
+					<li><strong>BRANDS</strong> should only be changed when a product is at the end of it's lifespan.</li>
+					<li>To select multiple <strong>PUCKS</strong> hold <strong>CTRL</strong> while clicking on each puck.</li>
+					<li>Unselecting a category/puck is the same process as selecting, hold <strong>CTRL</strong> and click the highlighted category/puck.
+					<a class="fancybox" href="images/admin_appliance_hoses.jpg"><img class="lazy" data-original="images/admin_appliance_hoses.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_appliance_hoses.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>Review all edits to the website to ensure structure after saving.</li>
+				</ol>
+			</section>
+			<section id="product-images">
+				<h3>Product Images</h3>
+				<p>To add your main product image, you'll see the <strong>IMAGE</strong> field with a <strong>Choose File</strong> button.  Once here, you can upload your image.</p>
+				<a class="fancybox" href="images/product_image.jpg"><img class="lazy" data-original="images/product_image.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/product_image.jpg" alt="Joy Cone Guide"></noscript>
+				<ul>
+					<li>First, you will click <strong>Choose File</strong> and select the image you want to upload from your local machine.</li>
+					<li><span class="alert">You <em>MUST</em> select the <strong>Upload</strong> button next to <strong>Choose File</strong> and keep the file size under 8MB or it won't upload.</span></li>
+					<li>Save changes and your new image will appear as a thumbnail on the product page.</li>
+				</ul>
+				<a class="fancybox" href="images/product_image_uploaded.jpg"><img class="lazy" data-original="images/product_image_uploaded.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/product_image_uploaded.jpg" alt="Joy Cone Guide"></noscript>
+			</section>
+			<section id="product-description">
+				<h3>Product Description</h3>
+				<p>To add copy to the product description, use the WYSIWYG editor in the <strong>BODY</strong> to add and format your copy, as seen below:</p>
+				<a class="fancybox" href="images/admin_body_rich_text.jpg"><img class="lazy" data-original="images/admin_body_rich_text.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/admin_body_rich_text.jpg" alt="Joy Cone Guide"></noscript>
+				<p class="alert">At any time, you can click the Source button in the top left corner to see the raw HTML that will be outputted to the screen. Here is an example of how each product&rsquo;s attribute list should look:</p>
+                <a class="fancybox" href="images/admin_body_simple_text.jpg"><img class="lazy" data-original="images/admin_body_simple_text.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+                <noscript><img src="images/admin_body_simple_text.jpg" alt="Joy Cone Guide"></noscript>
+			</section>
+			<section id="product-details">
+				<h3>Product Details PDFs</h3>
+				<p>To add a product PDF, click <strong>Choose File</strong> under the <strong>Product Details PDFs</strong> section and select your PDF to upload.  You will want to make sure you click <strong>Upload</strong>.</p>
+				<a class="fancybox" href="images/admin_pdf.jpg"><img class="lazy" data-original="images/admin_pdf.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/admin_pdf.jpg" alt="Joy Cone Guide"></noscript>
+			</section>
+			<section id="product-skus">
+				<h3>Product SKUs</h3>
+				<p>To add a SKU to a product, navigate to the <strong>SKUs</strong> field under the <strong>Product Details PDFs</strong> section and enter the corresponding SKU(s).</p>
+				<a class="fancybox" href="images/admin_product_sku.jpg"><img class="lazy" data-original="images/admin_product_sku.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/admin_product_sku.jpg" alt="Joy Cone Guide"></noscript>
+				<p>Drupal appends <strong>[nid:]</strong> after the SKU, do not delete it.</p>
+			</section>
+			<section id="product-categories">
+				<h3>Product Categories</h3>
+				<p>The first selection field in the right sidebar has the list of categories for the site.</p>
+				<a class="fancybox" href="images/admin_product_category.jpg"><img class="lazy" data-original="images/admin_product_category.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/admin_product_category.jpg" alt="Joy Cone Guide"></noscript>
+				<p>You can select a category by clicking once or by holding <strong>CTRL</strong> and clicking each respective category.</p>
+				<p>Unselecting a category is the same process as selecting, hold <strong>CTRL</strong> and click the highlighted category.</p>
+			</section>
+			<section id="product-brands">
+				<h3>Product Brands</h3>
+				<p>To pick a <strong>BRAND</strong> use the dropdown menu under the <strong>PRODUCT CATEGORIES</strong> selection field, each product only has one <strong>BRAND</strong>.</p>
+				<a class="fancybox" href="images/admin_product_brand.jpg"><img class="lazy" data-original="images/admin_product_brand.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/admin_product_brand.jpg" alt="Joy Cone Guide"></noscript>
+				<p>When a product is near the end of it's lifespan you'll change it to <strong>Closeout</strong>.</p>
+			</section>
+			<section id="product-pucks">
+				<h3>Product Pucks</h3>
+				<p>The third selection field in the right sidebar, under <strong>BRANDS</strong>, has the list of pucks that can be applied to a product.</p>
+				<a class="fancybox" href="images/admin_product_puck.jpg"><img class="lazy" data-original="images/admin_product_puck.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+				<noscript><img src="images/admin_product_puck.jpg" alt="Joy Cone Guide"></noscript>
+				<p>You can select a puck by clicking once or by holding <strong>CTRL</strong> and clicking each respective puck.</p>
+				<p>Unselecting a puck is the same process as selecting, hold <strong>CTRL</strong> and click the highlighted puck.</p>
+			</section>
+			<section id="editing-product-categories">
+				<h3>Editing Product Categories</h3>
+				<p>We've covered how to add <strong>Products</strong> to a <strong>Category</strong> but there are a couple other things we can do with a <strong>Category</strong> page that we haven't discussed</p>
+				<ol>
+					<li>
+						Navigate to the <strong>Admin Menu</strong> on top and click Content Management > Taxonomy
+						<br/>
+						<a class="fancybox" href="images/admin_menu_taxonomy.jpg"><img class="lazy" data-original="images/admin_menu_taxonomy.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/admin_menu_taxonomy.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>
+						If you need to edit the categories currently in use you can click <strong>list terms</strong>.
+                        <a class="fancybox" href="images/admin_taxonomy01.jpg"><img class="lazy" data-original="images/admin_taxonomy01.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/admin_taxonomy01.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>
+						Next you'll need to select the <strong>edit</strong> button for the category you want to edit.
+						<a class="fancybox" href="images/product_taxonomy_terms.jpg"><img class="lazy" data-original="images/product_taxonomy_terms.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/product_taxonomy_terms.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>
+						The <strong>Edit</strong> page has 2 fields you will use.
+						<br/>
+						<a class="fancybox" href="images/product_taxonomy_edit.jpg"><img class="lazy" data-original="images/product_taxonomy_edit.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/product_taxonomy_edit.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>
+						The <strong>TERM NAME</strong> is the category title.
+					</li>
+					<li>
+						The <strong>DESCRIPTION</strong> is the category description.
+					</li>
+					<li>
+						When you're done editing the category make sure to save.
+					</li>
+					<li>
+						A few final steps to complete the process include navigating to <strong>SITE CONFIGURATION > TAXONOMY MENU</strong>.
+						<br/>
+						<a class="fancybox" href="images/tax_menus01.jpg"><img class="lazy" data-original="images/tax_menus01.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/tax_menus01.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>
+						On this page you'll need to uncheck the <strong>Product Categories</strong> or <strong>Brands</strong> and save.
+						<br/>
+						<a class="fancybox" href="images/tax_menus02.jpg"><img class="lazy" data-original="images/tax_menus02.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/tax_menus02.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>
+						After you save, you will need to recheck the box you unchecked to refresh the menu when you add a new category.
+						<br/>
+						<a class="fancybox" href="images/tax_menus03.jpg"><img class="lazy" data-original="images/tax_menus03.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/tax_menus03.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>
+						Check the order of the menus in <strong>Taxonomy > List Terms</strong> to make sure your order is consistant.
+						<br/>
+						<a class="fancybox" href="images/admin_taxonomy01.jpg"><img class="lazy" data-original="images/admin_taxonomy01.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/admin_taxonomy01.jpg" alt="Joy Cone Guide"></noscript>
+						<a class="fancybox" href="images/product_taxonomy_list.jpg"><img class="lazy" data-original="images/product_taxonomy_list.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/product_taxonomy_list.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+				</ol>
+			</section>
+			<section id="unpublish-products">
+				<h3>Unpublishing Products</h3>
+				<ul>
+					<li>In order to remove a <strong>Product</strong> click on Content Management > Content
+					<a class="fancybox" href="images/product_content.jpg"><img class="lazy" data-original="images/product_content.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/product_content.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>Three drop down menus will appear with <strong>published</strong>, <strong>Blog entry</strong> and <strong>Around the Home</strong>.
+					<a class="fancybox" href="images/product_admin.jpg"><img class="lazy" data-original="images/product_admin.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/product_admin.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>First you will need to select <strong>Product</strong> from the drop down menu
+                    <a class="fancybox" href="images/product_admin_type.jpg"><img class="lazy" data-original="images/product_admin_type.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/product_admin_type.jpg" alt="Joy Cone Guide"></noscript></li>
+                    <li>Next you will need to select a <strong>Product Category</strong> from the third drop down menu and press filter
+                    <a class="fancybox" href="images/product_content_category.jpg"><img class="lazy" data-original="images/product_content_category.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/product_content_category.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>Select the checkbox next to your product and select <strong>Unpublish</strong> from the drop down menu under <strong>Update options</strong>, <strong>don't DELETE</strong> products.
+                    <a class="fancybox" href="images/product_category_unpublish.jpg"><img class="lazy" data-original="images/product_category_unpublish.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/product_category_unpublish.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>Finally press <strong>Update</strong>
+					<a class="fancybox" href="images/product_category_update.jpg"><img class="lazy" data-original="images/product_category_update.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/product_category_update.jpg" alt="Joy Cone Guide"></noscript></li>
+				</ul>
+			</section>
+			<section id="publish-products">
+				<h3>Publishing Products</h3>
+				<ul>
+					<li>In order to publish a <strong>Product</strong> that's been unpublished click on Content Management > Content
+					<a class="fancybox" href="images/product_content.jpg"><img class="lazy" data-original="images/product_content.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/product_content.jpg" alt="Joy Cone Guide"></noscript>
+					<a class="fancybox" href="images/product_admin.jpg"><img class="lazy" data-original="images/product_admin.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/product_admin.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>First you will need to select <strong>not published</strong> from the drop down menu and filter the results
+					<a class="fancybox" href="images/admin_unpublish_filter.jpg"><img class="lazy" data-original="images/admin_unpublish_filter.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_unpublish_filter.jpg" alt="Joy Cone Guide"></noscript>
+					<a class="fancybox" href="images/admin_unpublish_content.jpg"><img class="lazy" data-original="images/admin_unpublish_content.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_unpublish_content.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>Finally press <strong>Update</strong> and your product(s) will publish
+					<a class="fancybox" href="images/admin_unpublish_update.jpg"><img class="lazy" data-original="images/admin_unpublish_update.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_unpublish_update.jpg" alt="Joy Cone Guide"></noscript></li>
+				</ul>
+			</section>
+			<section id="special">
+				<h3>Special Pages</h3>
+				<ul>
+					<li>Special Page links are located on the bottom of the website in the <strong>Footer</strong>.</li>
+					<li>You can locate each <strong>Special Page</strong> in the admin menu by navigating to <strong>Admin Menu > --Homewerks-- > Special Pages</strong>.
+					<a class="fancybox" href="images/admin_menu_special_pages.jpg"><img class="lazy" data-original="images/admin_menu_special_pages.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_menu_special_pages.jpg" alt="Joy Cone Guide"></noscript></li>
+				</ul>
+			</section>
+			<section id="innovation">
+				<h3>Innovation Page</h3>
+				<ul>
+					<li>While logged in navigate to the top <strong>Admin Menu > --Homewerks-- > Special Pages > Innovation</strong>.
+					<a class="fancybox" href="images/admin_menu_special_pages_innovation.jpg"><img class="lazy" data-original="images/admin_menu_special_pages_innovation.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_menu_special_pages_innovation.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>The admin page for <strong>Innovation</strong> contains the copy and images for the respective page.
+					<a class="fancybox" href="images/admin_special_pages_innovation.jpg"><img class="lazy" data-original="images/admin_special_pages_innovation.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_special_pages_innovation.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>Titles and copy can be updated, but review the website after updating to ensure content was managed properly.
+					<a class="fancybox" href="images/special_pages_innovation.jpg"><img class="lazy" data-original="images/special_pages_innovation.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/special_pages_innovation.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+				</ul>
+			</section>
+			<section id="manufacturers">
+				<h3>Manufacturers Page</h3>
+				<ul>
+					<li>While logged in navigate to the top <strong>Admin Menu > --Homewerks-- > Special Pages > Manufacturers</strong>.
+					<a class="fancybox" href="images/admin_menu_special_pages_manufacturers.jpg"><img class="lazy" data-original="images/admin_menu_special_pages_manufacturers.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_menu_special_pages_manufacturers.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>The admin page for <strong>Manufacturers</strong> contains the copy and images for the respective page.
+					<a class="fancybox" href="images/admin_special_pages_manufacturers.jpg"><img class="lazy" data-original="images/admin_special_pages_manufacturers.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_special_pages_manufacturers.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>Titles and copy can be updated, but review the website after updating to ensure content was managed properly.
+					<a class="fancybox" href="images/special_pages_manufacturers.jpg"><img class="lazy" data-original="images/special_pages_manufacturers.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/special_pages_manufacturers.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+				</ul>
+			</section>
+			<section id="professionals">
+				<h3>Professionals Page</h3>
+				<ul>
+					<li>While logged in navigate to the top <strong>Admin Menu > --Homewerks-- > Special Pages > Professionals</strong>.
+					<a class="fancybox" href="images/admin_menu_special_pages_professionals.jpg"><img class="lazy" data-original="images/admin_menu_special_pages_professionals.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_menu_special_pages_professionals.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>The admin page for <strong>Professionals</strong> contains the copy and images for the respective page.
+					<a class="fancybox" href="images/admin_special_pages_professionals.jpg"><img class="lazy" data-original="images/admin_special_pages_professionals.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_special_pages_professionals.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>Titles and copy can be updated, but review the website after updating to ensure content was managed properly.
+					<a class="fancybox" href="images/special_pages_professionals.jpg"><img class="lazy" data-original="images/special_pages_professionals.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/special_pages_professionals.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+				</ul>
+			</section>
+			<section id="no_results">
+				<h3>No Results Settings</h3>
+				<ul>
+					<li>
+						While logged in navigate to the top <strong>Admin Menu > --Homewerks-- > No Results Settings</strong>.
+						<a class="fancybox" href="images/admin_menu_no_results.jpg"><img class="lazy" data-original="images/admin_menu_no_results.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/admin_menu_no_results.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+					<li>
+						The admin page for <strong>No Results Settings</strong> contains the copy for searches without results for various categories, sub-categories, blog posts, products, etc.
+						<a class="fancybox" href="images/admin_no_results.jpg"><img class="lazy" data-original="images/admin_no_results.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+						<noscript><img src="images/admin_no_results.jpg" alt="Joy Cone Guide"></noscript>
+					</li>
+				</ul>
+			</section>
+			<section id="users">
+				<h3>Add Users</h3>
+				<ol>
+					<li>When logged in navigate to the <strong>User Management</strong> menu and select <strong>Users > Add user</strong>.
+					<a class="fancybox" href="images/admin_user_menu.jpg"><img class="lazy" data-original="images/admin_user_menu.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_user_menu.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>A page for creating a user will pull up and make sure <strong>Add user</strong> tab is selected and highlighted in <strong>blue</strong>.</li>
+					<li>The <strong>Add user</strong> page requires a list of information about the new user. The following is required:</li>
+					<li><strong>Username</strong></li>
+					<li><strong>E-Mail Address</strong></li>
+					<li><strong>Password</strong></li>
+					<li><strong>Notify user of new account</strong> should be checked so they receive an email.
+					<a class="fancybox" href="images/admin_user_create.jpg"><img class="lazy" data-original="images/admin_user_create.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/admin_user_create.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>After entering all the information click <strong>Create new account</strong></li>
+					<li>Your new user can log into the site at <a href="http://www.joycone.com">http://www.joycone.com</a></li>
+				</ol>
+				<h3>Change Password</h3>
+				<ol>
+					<li>When logged in navigate to the <strong>User Management</strong> menu and select <strong>Users > Add user</strong>.
+					<a class="fancybox" href="images/user_password_change01.jpg"><img class="lazy" data-original="images/user_password_change01.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/user_password_change01.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>You can change the password for the user by clicking on edit on the right side of the user under <strong>Operations</strong>.
+					<a class="fancybox" href="images/user_password_change02.jpg"><img class="lazy" data-original="images/user_password_change02.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/user_password_change02.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>The new screen contains the <strong>Username, E-mail address and Password</strong>, to change to a new password enter both fields <strong>Password and Confirm password</strong>.
+					<a class="fancybox" href="images/user_password_change03.jpg"><img class="lazy" data-original="images/user_password_change03.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/user_password_change03.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>Scroll to the button of the page and click save to confirm your new password.
+					<a class="fancybox" href="images/user_password_change04.jpg"><img class="lazy" data-original="images/user_password_change04.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/user_password_change04.jpg" alt="Joy Cone Guide"></noscript></li>
+				</ol>
+			</section>
+			<section id="node_represent">
+				<h3>Node Represent</h3>
+				<ol>
+					<li>Node Represent will allow a user the ability to change the image for the subcategories on </li>
+					<li>Navigate to the admin menu and click <strong>Node Represent</strong>.</li>
+					<li>It will take you to a page of <strong>Global Settings</strong> with the node number of the image they will present when viewing <strong>Brand</strong> or <strong>Product</strong>.
+					<a class="fancybox" href="images/node_represent01.jpg"><img class="lazy" data-original="images/node_represent01.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/node_represent01.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>Search for the corresponding product you want to change on the front page, <strong>Global Settings</strong> will affect all image displays unless there is an over-ride for specific <strong>Brand</strong>.
+					<a class="fancybox" href="images/node_represent02.jpg"><img class="lazy" data-original="images/node_represent02.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/node_represent02.jpg" alt="Joy Cone Guide"></noscript></li>
+					<li>It will take you to a page of <strong>Global Settings</strong> with the node number of the image they will present when viewing <strong>Brand</strong> or <strong>Product</strong>.
+					<a class="fancybox" href="images/node_represent03.jpg"><img class="lazy" data-original="images/node_represent03.jpg" src="images/grey.gif" alt="Joy Cone" /></a>
+					<noscript><img src="images/node_represent03.jpg" alt="Joy Cone Guide"></noscript></li>
+				</ol>
+			</section>
+			<!--<section id="design">
+				<h2>Style Guide</h2>
+				<p>Click the button below to view the Joy Cone website's style guide.</p>
+				<br/><br/>
+				<a href="docs/Joy Cone_style_guide.pdf" target="_blank" class="button">download a PDF of the style guide</a>
+			</section>-->
+			<section id="typography">
+				<h2>Typography</h2>
+				<p>Joy Cone typography uses the Google Font family <strong>Ubuntu</strong> <a href="http://www.google.com/fonts/specimen/Ubuntu" target="_blank">http://www.google.com/fonts/specimen/Ubuntu</a>
+				<br/>
+				Default font-size:  14px
+				<br/>
+				Default line-height: 1.2 or 20px
+				<br/>
+				Hexidecimal color values:
+				<br/>
+				<span style="color:#8dc73f;background:#545454;padding:4px 6px;">#8dc73f</span>
+				<br/>
+				<span style="color:#000;background:#eee;padding:4px 6px;">#000</span>
+				<br/>
+				<span style="color:#787878;background:#eee;padding:4px 6px;">#58595b</span>
+				<br/>
+				<span style="color:#fff;background:#545454;padding:4px 6px;">#fff</span>
+			</section>
+			<section id="important">
+				<h2>Important Information</h2>
+				<p class="alert">Use <strong>Save</strong> button to save the item you are editing so you don't lose your update.</p>
+				<p class="alert">Do not <strong>DELETE</strong> any item, simply <strong>Unpublish</strong> it instead.</p>
+				<p>For <strong>Product Description</strong>, in the <strong>WYSIWYG</strong> you will be able to format the copy according to conventional HTML tags.  You should only be selecting from Paragraph and Heading (1,2,3,4,5,6) for your copy.  A Paragraph is your standard text.  A Heading is a title or sub title.  If you are confused as to what formats to use, copy an paste from one product page you'd like to emulate to the new one you are creating and edit from there.</p>
+			</section>
+			
+			<section id="resources">
+				<h2>Resources</h2>
+				<p>The following is a list of resources to reference when searching for a particular area of the site (most of these you will be able to navigate from from Drupal's <strong>Admin Menu</strong>):</p>
+				<ul>
+					<li>Login:  <a href="http://www.joycone.com/user/login" target="_blank">http://www.joycone.com/user/login</a></li>
+					<li>Products/SKUs:  <strong> Content Management > Content</strong></li>
+					<li>Drupal's website <a href="https://drupal.org/">https://drupal.org/</a></li>
+				</ul>
+			</section>
+		</article>
+	</div>
+	
+	<div id="back-to-top">
+		<a href="#" id="to-top">back to top &uarr;</a>
+	</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/jquery.smooth-scroll.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/lazyload.js"></script>
+<script src="js/script.js"></script>
+<!-- google analytics -->
+<script>
+	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>

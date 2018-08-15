@@ -1,0 +1,16 @@
+/*This CSS is created using Sass, you can edit the main CSS file but you're better off looking over the scss files and editing those*/
+
+//Reset CSS for a clean setup and clear fix.
+@import "_reset.scss";
+
+//Variables for CSS. Colors, font styling, etc.
+@import "_variables.scss";
+
+//Mixins for general formating for elements.
+@import "_mixins.scss";
+
+//Styling across the site.
+@import "_site.scss";
+
+//Page specific styles.
+//@import "_page.scss";

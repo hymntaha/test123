@@ -1,0 +1,11 @@
+name = Ubercart Disable Store
+description = Adds ability to disable Ubercart store (hide/disable add to cart, etc) for some conditions
+package = Ubercart - extra
+dependencies[] = uc_order
+core = 6.x
+; Information added by drupal.org packaging script on 2013-10-19
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "uc_disable"
+datestamp = "1382149037"
+

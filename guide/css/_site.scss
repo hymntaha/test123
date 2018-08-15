@@ -1,0 +1,319 @@
+/*Start of the site.scss CSS*/
+html {
+}
+body {
+	font: 1em/1.5 'Raleway', Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	text-align: left;
+	background: $white;
+	color:$black;
+	line-height:1.5em;
+	background: $white url('../images/body_bg.jpg') repeat 0 0;
+}
+a{
+	text-decoration:none;
+}
+#wrapper {
+	position: relative;
+	max-width: 1080px;
+	width: 94%;
+	margin: 0 auto;
+	@include box-shadow(0px, 3px, 5px, 2px, rgba(0, 0, 0, .25));
+	background: rgba(255, 255, 255, .5);
+}
+
+section {
+	margin: 3em auto;
+}
+
+
+/* ========================================
+   #header
+======================================== */
+
+#menu {
+	position: fixed;
+	display: block;
+	width: 25%;
+	max-width: 200px;
+	height: 100%;
+	background: $white;
+	@include box-shadow(3px, 0px, 5px, 0px, rgba(0, 0, 0, .25));
+	background-color:$blue04;
+}
+
+#header {
+	text-align: center;
+	margin: 0 auto;
+}
+#mobile-menu { display: none; }
+
+#header h1 {
+	padding: 1em 0;
+	margin: 0 auto;
+}
+
+#header h1 img {
+	width: 75%;
+	height: auto;
+}
+
+ul.nav,
+ul.mobile-nav {
+	list-style: none;
+}
+
+ul.nav li { margin: 0.25em 0; background:$white;}	
+
+ul.nav li a,
+ul.mobile-nav li a {
+	display: block;
+	width: 100%;
+	padding: .25em 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-top: 2px solid $blue01;
+	color: $blue03;
+	font-size: 1.025em;
+	@include box-shadow(0px, 2px, 3px, 0px, rgba(0, 0, 0, .5));
+}
+	ul.nav li a:hover, 
+	ul.mobile-nav li a:hover, 
+	ul.nav li.current a, 
+	ul.mobile-nav li.current a {
+		background: $blue01;
+		color:$white;
+	}
+	
+ul.mobile-nav li a { text-align: center; }
+
+#mobile-menu {  }
+
+.mobile-menu-button {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.mobile-menu-button a {
+	display: block;
+	width: 100%;
+	background: #2b2b2b url('../images/mobile_menu_button.png') no-repeat center center;
+	text-indent: -9999px;
+	overflow: hidden;
+	padding: 1em 0;
+	margin: 0 auto;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	@include box-shadow(0px, 2px, 3px, 0px, rgba(0, 0, 0, .5));
+}
+	.mobile-menu-button a:hover, .mobile-menu-button a.dropped { background-color: $blue05; }
+
+.alert {
+	background: url('../images/alert.png') no-repeat left top;
+	padding-left: 24px;
+}
+
+.important { position: relative; }
+.important a:before {
+	position: absolute;
+	left: 2%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url('../images/alert.png') no-repeat left center;
+	content: "";
+}
+
+/* ========================================
+   #main
+======================================== */
+
+#main {
+	width: 65%;
+	padding: 1em 0;
+	margin: 0 5% 0 30%;
+}
+
+
+#main p a, #main ol a, #main ul a {
+	color: $blue03;
+	font-weight:bold;
+}
+	#main p a:hover, #main ol a:hover, #main ul a:hover, ul.table-of-contents li a:hover { color:$blue05; }
+
+#main strong {
+	color: $black;
+	font-weight: bold;
+}
+
+#main img {
+	width: 96%;
+	height: auto;
+	background: #eee url('../images/ajax-loader.gif') no-repeat center center;
+	border: 1px solid #aaa;
+	@include box-shadow(0px, 2px, 3px, 0px, rgba(0, 0, 0, .5));
+	padding: 2%;
+	margin: 1em 0;
+}
+
+#main a img {
+	outline: none !important;
+}
+
+#main h2 {
+	color: $blue03;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 2em;
+	border-bottom: 2px dotted $blue01;
+	padding-bottom: .5em;
+}
+
+#main h3 {
+	color: $blue03;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 1.25em;
+	border-bottom: 3px dotted #eee;
+	margin-top: 1em;
+}
+
+#main p {
+	margin-top: 1em;
+}
+	
+	#main em {
+		color: #444;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+#main ol {
+	list-style-type: none;
+	counter-reset: level1;
+	color: $white;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+	margin-top: 1em;
+}
+ol li ol {
+	list-style-type: none;
+	counter-reset: level2;
+}
+ol li span {
+	margin: 0 5px 0 -25px;
+}
+
+#main ul li, #main ol li {
+	color: #1d1b1b;
+	text-shadow: none;
+	margin-bottom: .75em;
+	padding-left: 5%;
+}
+
+#main li ul {
+	list-style: none !important;
+	color: $white;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+#main ol li ul li { margin: 0; }
+
+ul.table-of-contents {
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1.15em;
+	text-transform: capitalize;
+	border: 1px solid $blue03;
+	@include box-shadow(0px, 2px, 3px, 0px, rgba(0, 0, 0, .5));
+}
+
+	ul.table-of-contents li {
+		color: $white !important;
+		background: $blue04;
+		padding: 8px 12px;
+		margin-bottom: 0 !important;
+	}
+	
+	ul.table-of-contents li:nth-child(even) {
+		background: $white;
+	}
+	
+		
+			ul.table-of-contents li ul { width: 90%; margin: 12px auto 0 auto; }
+		
+				ul.table-of-contents li ul li {
+					border-bottom: 1px dotted #aaa;
+					background-color: transparent;
+					padding: 4px 8px;
+				}
+				ul.table-of-contents li ul li:first-child {
+					border-top: 1px dotted #aaa;
+				}
+				
+				ul.table-of-contents li ul li:nth-child(even) {
+					background: none;
+				}
+	
+				ul.table-of-contents li ul li a {
+					font-size: .8em;
+					
+				}
+			
+#typography p span{
+	display:block;	
+}
+/* ========================================
+   #back-to-top
+======================================== */
+
+#back-to-top {
+	width: 10em;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	margin-left: -57px;
+	@include box-shadow(2px, 0px, 3px, 0px, rgba(0, 0, 0, .5));
+	text-align: center;
+	background: $blue01;
+}
+
+#to-top {
+	color: $white;
+	font-weight: bold;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+	line-height: 2.5em;
+}
+
+/* ========================================
+   media queries
+======================================== */
+@media only screen and (max-width : 640px) {
+	
+	#menu { display: none; }
+	#mobile-menu { display: block; }
+	ul.mobile-nav { display: none; }
+	#main { width: 92%; margin: 0 auto; }
+		
+}
+
+/* ========================================
+   print styles
+======================================== */
+@media print {
+
+	html, body, #wrapper, #main { background: $white !important; color: #000 !important; border: none !important; box-shadow: none !important; text-shadow: none !important; }
+	h1, h2, h3, h4, h5, h6, p, span, em, strong { color: #000 !important; }
+	a { color: #000 !important; text-decoration: underline !important; }
+	img { background: none !important; border: none !important; box-shadow: none !important; }
+	#main { width: 100% !important; margin: 0 !important; }
+	#menu	{ display: none !important; }	
+	#mobile-menu { display: none !important; }
+	ul.table-of-contents { background: $white !important; border: none !important; box-shadow: none !important; }
+	ul.table-of-contents li a { color: #000 !important; }
+	.button { background: none !important; border: none !important; border-radius: 0 !important; box-shadow: none !important; }
+	#back-to-top {display: none; }
+
+}
